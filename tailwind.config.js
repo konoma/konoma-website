@@ -158,7 +158,9 @@ module.exports = {
         ],
       },
       spacing: {
+        0.5: "4px",
         1: "8px",
+        1.5: "12px",
         2: "16px",
         3: "24px",
         4: "32px",
@@ -175,6 +177,7 @@ module.exports = {
         "logo-desktop": "200px",
       },
       height: {
+        "2px": "2px",
         logo: "56px",
         "logo-desktop": "80px",
       },
@@ -182,6 +185,7 @@ module.exports = {
   },
   variants: {
     extend: {
+      textColor: ["active"],
       backgroundColor: ["active"],
     },
   },
