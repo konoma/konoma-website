@@ -1,18 +1,19 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Logo from "@components/Logo";
+import LogoInverted from "@components/LogoInverted";
+import LinkButton from "@components/base/LinkButton";
 
 export default function Home() {
   return (
-    <div className="container">
+    <>
       <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Konoma</title>
       </Head>
 
-      <main>
-        <p className="description">
-            Hello Konoma 👋🏼
-        </p>
+      <main className="mt-20 text-center">
+        <LogoInverted />
+        <Logo />
       </main>
-    </div>
-  )
+    </>
+  );
 }
