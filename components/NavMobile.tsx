@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import LogoInverted from "@components/LogoInverted";
 import NavLink from "@components/NavLink";
-// @ts-ignore
-import IconMenu from "./icons/menu.svg";
 import { BaseComponentProps } from "helper/classNames";
+import NavMobileButton from "./NavMobileButton";
 
 // extend BaseComponentProps to get default props automatically (like className)
 interface Props extends BaseComponentProps { buttonClassNames?: string }
@@ -11,23 +10,26 @@ interface Props extends BaseComponentProps { buttonClassNames?: string }
 const NavMobile: React.FC<Props> = (props) => {
   const { className } = props;
 
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className={`fixed w-full h-screen z-50 \
+    <nav className={`fixed w-full z-50 \
+                      ${isOpen ? 'h-full' : 'h-auto'} \
                       overflow-hidden flex flex-col \
                       bg-white bg-opacity-40 backdrop-filter backdrop-blur-2xl \
                       ${className ?? ""}`}>
 
       <div className="flex flex-nowrap justify-between">
         <LogoInverted />
-        <button className="flex-initial inline-flex items-center px-3 font-medium">
-          Menu <IconMenu className="flex-initial w-3 h-3 ml-1.5" />
-        </button>
+        <NavMobileButton toggled={isOpen} onClick={() => setIsOpen(!isOpen)} />
       </div>
-      <div className="flex-auto flex flex-col flex-nowrap justify-around items-center px-5 py-10">
+
+      <div className={`flex-auto flex-col flex-nowrap justify-around items-center px-5 py-10 \
+                        ${isOpen ? 'flex' : 'hidden'}`}>
         <NavLink url={"/"}>Übersicht</NavLink>
-        <NavLink url={"/"}>Projekte</NavLink>
-        <NavLink url={"/"}>Team</NavLink>
-        <NavLink url={"/"}>Kontakt</NavLink>
+        <NavLink url={"/projekte"}>Projekte</NavLink>
+        <NavLink url={"/team"}>Team</NavLink>
+        <NavLink url={"/kontakt"}>Kontakt</NavLink>
       </div>
 
     </nav>
