@@ -13,7 +13,7 @@ const NavLink: React.FC<Props> = (props) => {
     <Link href={url} passHref>
       {/* Todo if active, then text-indigo-700*/}
       <a
-        className="flex flex-col flex-nowrap justify-center items-center h-10 px-5 font-sans font-medium text-sm md:text-sm-desktop text-gray-900 group hover:text-indigo-500 active:text-indigo-900 transition transition-colors"
+        className="flex flex-col justify-center items-center h-10 px-5 font-sans font-medium text-sm md:text-sm-desktop text-gray-900 group hover:text-indigo-500 active:text-indigo-900 transition transition-colors"
         title={title}
       >
         {children}
