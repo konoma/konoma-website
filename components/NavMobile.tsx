@@ -4,12 +4,15 @@ import NavLink from "@components/NavLink";
 // @ts-ignore
 import IconMenu from "./icons/menu.svg";
 
-interface Props {}
+interface Props { }
 
 const NavMobile: React.FC<Props> = (props) => {
-  const {} = props;
+  const { } = props;
   return (
-    <nav className="fixed w-full h-screen z-50 overflow-hidden flex flex-col bg-white bg-opacity-40 backdrop-filter backdrop-blur-2xl">
+    <nav className={`fixed w-full h-screen z-50 \
+                      overflow-hidden flex flex-col \
+                      bg-white bg-opacity-40 backdrop-filter backdrop-blur-2xl`}>
+
       <div className="flex flex-nowrap justify-between">
         <LogoInverted />
         <button className="flex-initial inline-flex items-center px-3 font-medium">
@@ -22,6 +25,7 @@ const NavMobile: React.FC<Props> = (props) => {
         <NavLink url={"/"}>Team</NavLink>
         <NavLink url={"/"}>Kontakt</NavLink>
       </div>
+
     </nav>
   );
 };
