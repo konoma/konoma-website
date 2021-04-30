@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "piotrpalarz.vscode-gitignore-generator",
+    "dbaeumer.vscode-eslint",
+    "mhutchie.git-graph",
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "ms-vsliveshare.vsliveshare",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "visualstudioexptteam.vscodeintellicode"
+  ]
+}
