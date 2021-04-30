@@ -1,5 +1,5 @@
 import Head from "next/head";
-import NavMain from "@components/NavMain";
+import NavMobile from "@components/NavMobile";
 
 export default function Home() {
   return (
@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Konoma</title>
       </Head>
-      <NavMain />
+      <NavMobile />
     </>
   );
 }
