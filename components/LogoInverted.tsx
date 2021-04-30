@@ -4,7 +4,7 @@ interface Props {}
 
 const LogoInverted: React.FC<Props> = (props) => {
   return (
-    <div className="inline-flex justify-center align-middle bg-indigo-700 w-logo md:w-logo-desktop h-logo md:h-logo-desktop px-3 md:px-5">
+    <div className="inline-flex justify-center align-middle bg-indigo-700 w-[140px] md:w-[200px] h-[56px] md:h-[80px] px-3 md:px-5">
       <svg
         viewBox="0 0 89 16"
         fill="none"

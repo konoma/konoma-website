@@ -17,7 +17,7 @@ const NavLink: React.FC<Props> = (props) => {
         title={title}
       >
         {children}
-        <span className="w-3 h-2px mt-0.5 bg-current opacity-0 group-hover:opacity-100 transition transition-opacity" />
+        <span className="w-3 h-[2px] mt-0.5 bg-current opacity-0 group-hover:opacity-100 transition transition-opacity" />
       </a>
     </Link>
   );

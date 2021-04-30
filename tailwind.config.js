@@ -1,7 +1,7 @@
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  mode: 'jit',
-  darkMode: 'media',
+  mode: "jit",
+  darkMode: "media",
   theme: {
     extend: {
       colors: {
@@ -172,16 +172,7 @@ module.exports = {
         15: "120px",
         20: "160px",
         24: "192px",
-      },
-      width: {
-        logo: "140px",
-        "logo-desktop": "200px",
-      },
-      height: {
-        "2px": "2px",
-        logo: "56px",
-        "logo-desktop": "80px",
-      },
+      }
     },
   },
   plugins: [],

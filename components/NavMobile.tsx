@@ -3,15 +3,19 @@ import LogoInverted from "@components/LogoInverted";
 import NavLink from "@components/NavLink";
 // @ts-ignore
 import IconMenu from "./icons/menu.svg";
+import { BaseComponentProps } from "helper/classNames";
 
-interface Props { }
+// extend BaseComponentProps to get default props automatically (like className)
+interface Props extends BaseComponentProps { buttonClassNames?: string }
 
 const NavMobile: React.FC<Props> = (props) => {
-  const { } = props;
+  const { className } = props;
+
   return (
     <nav className={`fixed w-full h-screen z-50 \
                       overflow-hidden flex flex-col \
-                      bg-white bg-opacity-40 backdrop-filter backdrop-blur-2xl`}>
+                      bg-white bg-opacity-40 backdrop-filter backdrop-blur-2xl \
+                      ${className ?? ""}`}>
 
       <div className="flex flex-nowrap justify-between">
         <LogoInverted />
