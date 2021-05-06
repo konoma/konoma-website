@@ -17,7 +17,7 @@ const NavLangToggle: React.FC<NavLangToggleProps> = (props) => {
       <Link href={"/"} passHref>
         <a
           className={`py-2 px-0.5 font-semibold text-grey-900 \
-                    hover:text-indigo-500 focus:outline-none focus:text-indigo-500 active:text-indigo-900 transition transition-colors`}
+                    hover:text-indigo-500 focus:outline-none focus:text-indigo-500 active:text-indigo-900 transition-colors`}
         >
           DE
         </a>
@@ -26,7 +26,7 @@ const NavLangToggle: React.FC<NavLangToggleProps> = (props) => {
       <Link href={"/en"} passHref>
         <a
           className={`py-2 px-0.5 font-medium text-grey-700 \
-                    hover:text-indigo-500 focus:outline-none focus:text-indigo-500 active:text-indigo-900 transition transition-colors`}
+                    hover:text-indigo-500 focus:outline-none focus:text-indigo-500 active:text-indigo-900 transition-colors`}
         >
           EN
         </a>

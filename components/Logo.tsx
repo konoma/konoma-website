@@ -9,7 +9,7 @@ const Logo: React.FC<LogoProps> = (props) => {
   return (
     <div
       className={`flex justify-center w-15 md:w-24 mx-auto
-                    ${className ?? ""}`}
+                ${className ?? ""}`}
     >
       <svg
         viewBox="0 0 89 16"

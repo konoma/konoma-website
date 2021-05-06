@@ -20,7 +20,7 @@ const LinkButton: React.FC<LinkButtonProps> = (props) => {
       <a
         className={`inline-block py-[10px] px-2 rounded-full \
                     font-sans text-white text-base \
-                    bg-indigo-500 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 active:bg-indigo-900 transition transition-colors
+                    bg-indigo-500 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 active:bg-indigo-900 transition-colors
                     ${isActive ? "bg-indigo-900" : "bg-indigo-500"}
                     ${className ?? ""}`}
         title={title}

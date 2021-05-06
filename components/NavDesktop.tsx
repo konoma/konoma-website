@@ -11,8 +11,8 @@ const NavDesktop: React.FC<NavDesktopProps> = (props) => {
   const { className } = props;
   return (
     <nav
-      className={`hidden fixed w-full z-50 \
-                flex flex-nowrap justify-between overflow-hidden \
+      className={`fixed w-full z-50 \
+                hidden flex-nowrap justify-between overflow-hidden \
                 ${className ?? ""}`}
     >
       <LogoInverted />
