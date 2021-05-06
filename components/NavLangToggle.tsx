@@ -11,7 +11,7 @@ const NavLangToggle: React.FC<NavLangToggleProps> = (props) => {
 
   return (
     <div
-      className={`flex flex-nowrap px-3 text-sm
+      className={`flex flex-nowrap text-sm
                 ${className ?? ""}`}
     >
       <Link href={"/"} passHref>

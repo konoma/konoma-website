@@ -18,7 +18,7 @@ const NavLink: React.FC<NavLinkProps> = (props) => {
   return (
     <Link href={url} passHref>
       <a
-        className={`flex flex-col justify-center items-center px-5 py-4 \
+        className={`flex flex-col justify-center items-center\
                     font-sans font-medium text-sm md:text-sm-desktop \
                     group hover:text-indigo-500 focus:outline-none focus:text-indigo-500 active:text-indigo-900 transition transition-colors \
                     ${isActive ? "text-indigo-700" : "text-gray-900"}

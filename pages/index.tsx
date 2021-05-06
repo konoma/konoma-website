@@ -1,5 +1,6 @@
 import Head from "next/head";
 import NavMobile from "@components/NavMobile";
+import NavDesktop from "@components/NavDesktop";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       </Head>
 
       <NavMobile className="lg:hidden" />
+      <NavDesktop className="lg:flex" />
     </>
   );
 }
