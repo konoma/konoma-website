@@ -167,13 +167,14 @@ module.exports = {
         4: "32px",
         5: "40px",
         6: "48px",
+        7: "56px",
         8: "64px",
         10: "80px",
         15: "120px",
         20: "160px",
         24: "192px",
-      }
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };
