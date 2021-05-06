@@ -4,19 +4,19 @@ import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
 
 interface LinkButtonProps extends BaseComponentProps {
-  url: string;
+  to: string;
   title?: string;
   children?: string;
 }
 
 const LinkButton: React.FC<LinkButtonProps> = (props) => {
-  const { className, url, title, children } = props;
+  const { className, to, title, children } = props;
 
   const router = useRouter();
-  const isActive = router.pathname.startsWith(url);
+  const isActive = router.pathname.startsWith(to);
 
   return (
-    <Link href={url} passHref>
+    <Link href={to} passHref>
       <a
         className={`inline-block py-[10px] px-2 rounded-full \
                     font-sans text-white text-base \

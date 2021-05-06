@@ -4,19 +4,19 @@ import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
 
 interface NavLinkProps extends BaseComponentProps {
-  url: string;
+  to: string;
   title?: string;
   children?: string;
 }
 
 const NavLink: React.FC<NavLinkProps> = (props) => {
-  const { className, url, title, children } = props;
+  const { className, to, title, children } = props;
 
   const router = useRouter();
-  const isActive = router.pathname.startsWith(url);
+  const isActive = router.pathname.startsWith(to);
 
   return (
-    <Link href={url} passHref>
+    <Link href={to} passHref>
       <a
         className={`flex flex-col justify-center items-center\
                     font-sans font-medium text-sm md:text-sm-desktop \

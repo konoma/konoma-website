@@ -32,28 +32,16 @@ const NavMobile: React.FC<NavMobileProps> = (props) => {
         className={`flex-auto flex-col flex-nowrap justify-around items-center px-5 py-10 \
                   ${isOpen ? "flex" : "hidden"}`}
       >
-        <NavLink url={"/"} title={"Zur Startseite"} className={`px-5 py-4`}>
+        <NavLink to={"/"} title={"TBD"} className={`px-5 py-4`}>
           Übersicht
         </NavLink>
-        <NavLink
-          url={"/projekte"}
-          title={"Unsere Projekte"}
-          className={`px-5 py-4`}
-        >
+        <NavLink to={"/projekte"} title={"TBD"} className={`px-5 py-4`}>
           Projekte
         </NavLink>
-        <NavLink
-          url={"/team"}
-          title={"Das Konoma Team"}
-          className={`px-5 py-4`}
-        >
+        <NavLink to={"/team"} title={"TBD"} className={`px-5 py-4`}>
           Team
         </NavLink>
-        <NavLink
-          url={"/kontakt"}
-          title={"Kontaktiere uns"}
-          className={`px-5 py-4`}
-        >
+        <NavLink to={"/kontakt"} title={"TBD"} className={`px-5 py-4`}>
           Kontakt
         </NavLink>
         <NavLangToggle />

@@ -20,16 +20,16 @@ const NavDesktop: React.FC<NavDesktopProps> = (props) => {
         className={`flex flex-nowrap items-baseline p-1 \
                   bg-white bg-opacity-40 backdrop-filter backdrop-blur-2xl`}
       >
-        <NavLink url={"/"} title={"TBD"} className={`p-2`}>
+        <NavLink to={"/"} title={"TBD"} className={`p-2`}>
           Übersicht
         </NavLink>
-        <NavLink url={"/projekte"} title={"TBD"} className={`p-2`}>
+        <NavLink to={"/projekte"} title={"TBD"} className={`p-2`}>
           Projekte
         </NavLink>
-        <NavLink url={"/team"} title={"TBD"} className={`p-2`}>
+        <NavLink to={"/team"} title={"TBD"} className={`p-2`}>
           Team
         </NavLink>
-        <LinkButton url={"/kontakt"} title={"TBD"} className={`mx-2`}>
+        <LinkButton to={"/kontakt"} title={"TBD"} className={`mx-2`}>
           Kontakt
         </LinkButton>
         <NavLangToggle className={`ml-2 mr-[20px]`} />
