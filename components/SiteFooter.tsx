@@ -11,16 +11,19 @@ const SiteFooter: React.FC<SiteFooterProps> = (props) => {
 
   return (
     <footer
-      className="flex flex-col mt-8 p-5 md:p-8 space-y-4 \
-                bg-white border-t border-indigo-200"
+      className={`flex flex-col mt-8 p-5 md:p-8 gap-4 \
+                bg-white border-t border-indigo-200
+                ${className ?? ""}`}
     >
       <Logo />
-      <div className="font-sans font-medium text-sm text-center">
+      <div className={`font-sans font-medium text-sm text-center`}>
         Konoma GmbH, <br className="md:hidden" />
         Rütistrasse 6, <br className="md:hidden" />
         5400 Baden, Schweiz
       </div>
-      <div className="flex flex-nowrap flex-col md:flex-row justify-center items-center">
+      <div
+        className={`flex flex-nowrap flex-col md:flex-row justify-center items-center`}
+      >
         <LinkIcon
           text={"info@konoma.ch"}
           to={"mailto:info@konoma.ch"}

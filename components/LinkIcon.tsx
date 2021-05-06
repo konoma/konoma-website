@@ -12,6 +12,7 @@ interface LinkIconProps extends BaseComponentProps {
 
 const IconLink: React.FC<LinkIconProps> = (props) => {
   const { className, text, to, type, iconLeft, iconRight } = props;
+
   // I guess we will need a special link for internal links. We'll add this later.
   return (
     <Link href={to} passHref>
@@ -24,7 +25,7 @@ const IconLink: React.FC<LinkIconProps> = (props) => {
                     group text-blue-700 focus:outline-none focus:text-indigo-500 active:text-indigo-900 transition-colors \
                     ${className ?? ""}`}
       >
-        <span className="flex flex-nowrap">
+        <span className={`flex flex-nowrap`}>
           {iconLeft}
           {text}
           {iconRight}
