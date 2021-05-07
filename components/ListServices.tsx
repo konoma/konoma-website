@@ -16,7 +16,7 @@ const ListServices: React.FC<ListServicesProps> = (props) => {
 
   return (
     <ul
-      className={`flex flex-col flex-nowrap gap-2
+      className={`flex flex-col flex-nowrap gap-2 mt-4 md:mt-5
                 ${className ?? ""}`}
     >
       <ListIcon
