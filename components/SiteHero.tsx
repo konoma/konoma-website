@@ -9,7 +9,7 @@ const SiteHero: React.FC<SiteHeroProps> = (props) => {
 
   return (
     <header>
-      <h1 className="font-sans font-semibold text-gray-900 text-5xl lg:text-5xl-desktop mb-4 md:mb-8">
+      <h1 className=" text-5xl font-sans font-semibold text-gray-900 text-5xl lg:text-5xl-desktop mb-4 md:mb-8">
         Wir gestalten gemeinsam Ihren Erfolg in der Welt von morgen.
       </h1>
       <h2 className="font-sans font-medium text-gray-900 text-lg md:text-lg-desktop mb-4 md:mb-8">

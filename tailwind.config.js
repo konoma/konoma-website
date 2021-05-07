@@ -80,77 +80,77 @@ module.exports = {
             letterSpacing: "-0.02em",
           },
         ],
-        "text-lg": [
+        "lg": [
           "19px",
           {
             lineHeight: "26px",
           },
         ],
-        "text-lg-desktop": [
+        "lg-desktop": [
           "24px",
           {
             lineHeight: "32px",
             letterSpacing: "-0.01em",
           },
         ],
-        "text-xl": [
+        "xl": [
           "19px",
           {
             lineHeight: "26px",
           },
         ],
-        "text-xl-desktop": [
+        "xl-desktop": [
           "24px",
           {
             lineHeight: "32px",
           },
         ],
-        "text-2xl": [
+        "2xl": [
           "21px",
           {
             lineHeight: "28px",
           },
         ],
-        "text-2xl-desktop": [
+        "2xl-desktop": [
           "32px",
           {
             lineHeight: "40px",
           },
         ],
-        "text-3xl": [
+        "3xl": [
           "24px",
           {
             lineHeight: "32px",
           },
         ],
-        "text-3xl-desktop": [
+        "3xl-desktop": [
           "40px",
           {
             lineHeight: "50px",
           },
         ],
-        "text-4xl": [
+        "4xl": [
           "26px",
           {
             lineHeight: "34px",
             letterSpacing: "-0.02em",
           },
         ],
-        "text-4xl-desktop": [
+        "4xl-desktop": [
           "48px",
           {
             lineHeight: "56px",
             letterSpacing: "-0.02em",
           },
         ],
-        "text-5xl": [
+        "5xl": [
           "32px",
           {
             lineHeight: "40px",
             letterSpacing: "-0.03em",
           },
         ],
-        "text-5xl-desktop": [
+        "5xl-desktop": [
           "64px",
           {
             lineHeight: "72px",
