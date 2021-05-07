@@ -16,31 +16,24 @@ const ListServices: React.FC<ListServicesProps> = (props) => {
 
   return (
     <ul
-      className={`flex flex-col flex-nowrap gap-2 mt-4 md:mt-5
+      className={`flex flex-col flex-nowrap gap-2
                 ${className ?? ""}`}
     >
-      <ListIcon
-        text={"Strategische Beratung mit Design Thinking"}
-        icon={<IconServiceStrategicConsulting />}
-      />
-      <ListIcon
-        text={"Gestaltung von Kundeninteraktionen"}
-        icon={<IconServiceCustomerInteraction />}
-      />
-      <ListIcon
-        text={"User Experience- und Interaction-Design"}
-        icon={<IconServiceUserExperience />}
-      />
-      <ListIcon
-        text={
-          "Gestaltung von digitalen Benutzeroberflächen mit hoher Bedienbarkeit"
-        }
-        icon={<IconServiceUserInterface />}
-      />
-      <ListIcon
-        text={"Entwicklung von Software für Web und Mobile"}
-        icon={<IconServiceDevelopment />}
-      />
+      <ListIcon icon={<IconServiceStrategicConsulting />}>
+        Strategische Beratung mit Design Thinking
+      </ListIcon>
+      <ListIcon icon={<IconServiceCustomerInteraction />}>
+        Gestaltung von Kundeninteraktionen
+      </ListIcon>
+      <ListIcon icon={<IconServiceUserExperience />}>
+        User Experience- und Interaction-Design
+      </ListIcon>
+      <ListIcon icon={<IconServiceUserInterface />}>
+        Gestaltung von digitalen Benutzeroberflächen mit hoher Bedienbarkeit
+      </ListIcon>
+      <ListIcon icon={<IconServiceDevelopment />}>
+        Entwicklung von Software für Web und Mobile
+      </ListIcon>
     </ul>
   );
 };
