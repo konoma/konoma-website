@@ -80,7 +80,7 @@ module.exports = {
             letterSpacing: "-0.02em",
           },
         ],
-        "lg": [
+        lg: [
           "19px",
           {
             lineHeight: "26px",
@@ -93,7 +93,7 @@ module.exports = {
             letterSpacing: "-0.01em",
           },
         ],
-        "xl": [
+        xl: [
           "19px",
           {
             lineHeight: "26px",
@@ -173,6 +173,7 @@ module.exports = {
         15: "120px",
         20: "160px",
         24: "192px",
+        25: "200px",
       },
     },
   },
