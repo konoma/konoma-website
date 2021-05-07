@@ -18,7 +18,7 @@ const NavMobile: React.FC<NavMobileProps> = (props) => {
   return (
     <nav
       className={`fixed w-full z-50 \
-                overflow-hidden flex flex-col \
+                overflow-hidden flex flex-col lg:hidden \
                 bg-white bg-opacity-40 backdrop-filter backdrop-blur-2xl \
                 ${isOpen ? "h-full" : "h-auto"}
                 ${className ?? ""}`}

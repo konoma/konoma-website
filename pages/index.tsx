@@ -10,10 +10,10 @@ export default function Home() {
       <Head>
         <title>Konoma</title>
       </Head>
+      <NavMobile />
+      <NavDesktop />
       <SiteHero />
-      {/*<NavMobile className="lg:hidden" />*/}
-      {/*<NavDesktop className="lg:flex" />*/}
-      {/*<SiteFooter />*/}
+      <SiteFooter />
     </>
   );
 }
