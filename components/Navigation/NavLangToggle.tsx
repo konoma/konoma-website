@@ -1,4 +1,4 @@
-import { BaseComponentProps } from "../helper/classNames";
+import { BaseComponentProps } from "../../helper/classNames";
 import React from "react";
 import Link from "next/link";
 

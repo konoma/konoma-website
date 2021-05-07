@@ -1,9 +1,9 @@
 import React from "react";
-import { BaseComponentProps } from "../helper/classNames";
+import { BaseComponentProps } from "../../helper/classNames";
 import LogoInverted from "@components/LogoInverted";
-import NavLink from "@components/NavLink";
-import LinkButton from "@components/LinkButton";
-import NavLangToggle from "@components/NavLangToggle";
+import NavLink from "@components/Navigation/NavLink";
+import LinkButton from "@components/Navigation/LinkButton";
+import NavLangToggle from "@components/Navigation/NavLangToggle";
 
 interface NavDesktopProps extends BaseComponentProps {}
 

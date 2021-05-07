@@ -1,7 +1,7 @@
 import React from "react";
 import { BaseComponentProps } from "helper/classNames";
 import Logo from "@components/Logo";
-import LinkIcon from "@components/LinkIcon";
+import LinkIcon from "@components/Navigation/LinkIcon";
 import { IconMail, IconArrow } from "@components/icons";
 
 interface SiteFooterProps extends BaseComponentProps {}

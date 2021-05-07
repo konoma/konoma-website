@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { BaseComponentProps } from "helper/classNames";
 import Link from "next/link";
 import LogoInverted from "@components/LogoInverted";
-import NavLink from "@components/NavLink";
+import NavLink from "@components/Navigation/NavLink";
 import NavMobileButton from "./NavMobileButton";
-import NavLangToggle from "@components/NavLangToggle";
+import NavLangToggle from "@components/Navigation/NavLangToggle";
 
 // extend BaseComponentProps to get default props automatically (like className)
 interface NavMobileProps extends BaseComponentProps {

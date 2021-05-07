@@ -1,8 +1,8 @@
 import Head from "next/head";
-import NavMobile from "@components/NavMobile";
-import NavDesktop from "@components/NavDesktop";
-import SiteFooter from "@components/SiteFooter";
-import SiteHero from "@components/SiteHero";
+import NavMobile from "@components/Navigation/NavMobile";
+import NavDesktop from "@components/Navigation/NavDesktop";
+import SiteFooter from "@components/Layout/SiteFooter";
+import SiteHero from "@components/Layout/SiteHero";
 
 export default function Home() {
   return (

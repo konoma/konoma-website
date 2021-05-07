@@ -1,6 +1,7 @@
 import React from "react";
-import { BaseComponentProps } from "../helper/classNames";
+import { BaseComponentProps } from "../../helper/classNames";
 import ListServices from "@components/ListServices";
+import Heading from "@components/Copy/Heading";
 
 interface SiteHeroProps extends BaseComponentProps {}
 
@@ -9,8 +10,11 @@ const SiteHero: React.FC<SiteHeroProps> = (props) => {
 
   return (
     <header>
+      <Heading level={1} text={"Heading h1"} />
       <h1 className="font-sans font-semibold text-gray-900 text-5xl lg:text-5xl-desktop mb-4 md:mb-8">
-        Wir gestalten gemeinsam Ihren Erfolg in der Welt von morgen.
+        Wir gestalten gemeinsam
+        <br />
+        Ihren Erfolg in der Welt von morgen.
       </h1>
       <h2 className="font-sans font-medium text-gray-900 text-lg md:text-lg-desktop mb-4 md:mb-8">
         Um dies zu erreichen, gestalten wir zusammen Ihre Zukunft und gehen mit

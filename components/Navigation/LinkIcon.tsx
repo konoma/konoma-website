@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { BaseComponentProps } from "../helper/classNames";
+import { BaseComponentProps } from "../../helper/classNames";
 
 interface LinkIconProps extends BaseComponentProps {
   text: string;

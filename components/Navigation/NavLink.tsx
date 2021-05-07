@@ -1,5 +1,5 @@
 import React from "react";
-import { BaseComponentProps } from "../helper/classNames";
+import { BaseComponentProps } from "../../helper/classNames";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
 
