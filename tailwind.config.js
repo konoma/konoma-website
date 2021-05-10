@@ -158,6 +158,9 @@ module.exports = {
           },
         ],
       },
+      screens: {
+        "3xl": "1680px",
+      },
       spacing: {
         0.5: "4px",
         1: "8px",
