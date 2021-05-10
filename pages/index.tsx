@@ -3,6 +3,7 @@ import NavMobile from "@components/Navigation/NavMobile";
 import NavDesktop from "@components/Navigation/NavDesktop";
 import SiteFooter from "@components/Layout/SiteFooter";
 import SiteHero from "@components/Layout/SiteHero";
+import ContentHero from "@components/Content/ContentHero";
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
       </Head>
       <NavMobile />
       <NavDesktop />
-      <SiteHero />
+      {/*<SiteHero />*/}
+      <ContentHero />
       <SiteFooter />
     </>
   );
