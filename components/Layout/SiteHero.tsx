@@ -18,31 +18,27 @@ const SiteHero: React.FC<SiteHeroProps> = (props) => {
       <Heading
         level="hero"
         type="h1"
-        className={`lg:col-start-1 lg:col-end-4 lg:row-start-1 lg-row-end-2`}
+        className={`lg:col-start-1 lg:col-end-4 lg:row-start-1 lg-row-end-2 mb-4 lg:mb-8`}
       >
         Wir gestalten gemeinsam Ihren Erfolg in der Welt von morgen.
       </Heading>
       <Copy
         level={"base"}
-        className={`lg:col-start-1 lg:col-end-3 lg:row-start-2 lg-row-end-3`}
+        className={`lg:col-start-1 lg:col-end-3 lg:row-start-2 lg-row-end-3 mb-4 lg:mb-8`}
       >
         Um dies zu erreichen, gestalten wir zusammen Ihre Zukunft und gehen mit
         Ihnen den Weg dorthin. Dabei erarbeiten wir strategische Konzepte,
         kundenzentrierte Interaktionen und digitale Lösungen.
       </Copy>
       <div
-        className={`lg:col-start-3 lg:col-end-5 lg:row-start-2 lg:row-end-5`}
+        className={`lg:col-start-3 lg:col-end-5 lg:row-start-2 lg:row-end-5 mb-4 lg:mb-0 3xl:transform 3xl:translate-x-10`}
       >
         <div className={`aspect-w-1 aspect-h-1 bg-indigo-100`} />
       </div>
       <div
-        className={`lg:col-start-1 lg:col-end-4 lg:row-start-3 lg:row-end-5`}
+        className={`lg:col-start-1 lg:col-end-3 lg:row-start-3 lg:row-end-5 3xl:col-end-4`}
       >
-        <Heading
-          level="2"
-          type="h3"
-          className={`text-indigo-700 lg:text-3xl-desktop`}
-        >
+        <Heading level="2" type="h3" colorBlue className={`mb-4 lg:mb-6`}>
           Unsere Leidenschaft
         </Heading>
         <ListServices />
