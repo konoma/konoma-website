@@ -25,6 +25,8 @@ const NavLink: React.FC<NavLinkProps> = (props) => {
                     ${className ?? ""}`}
         title={title}
       >
+        <span
+            className={`w-3 h-[2px] mb-0.5 bg-transparent`}/>
         {children}
         <span
           className={`w-3 h-[2px] mt-0.5 bg-current \

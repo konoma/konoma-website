@@ -12,27 +12,29 @@ const NavDesktop: React.FC<NavDesktopProps> = (props) => {
   return (
     <nav
       className={`fixed w-full z-50 \
-                hidden lg:flex flex-nowrap justify-between overflow-hidden \
+                hidden lg:block \
                 ${className ?? ""}`}
     >
-      <LogoInverted />
-      <div
-        className={`flex flex-nowrap items-baseline p-1 \
-                  bg-white bg-opacity-40 backdrop-filter backdrop-blur-2xl`}
-      >
-        <NavLink to={"/"} title={"TBD"} className={`p-2`}>
-          Übersicht
-        </NavLink>
-        <NavLink to={"/projekte"} title={"TBD"} className={`p-2`}>
-          Projekte
-        </NavLink>
-        <NavLink to={"/team"} title={"TBD"} className={`p-2`}>
-          Team
-        </NavLink>
-        <LinkButton to={"/kontakt"} title={"TBD"} className={`mx-2`}>
-          Kontakt
-        </LinkButton>
-        <NavLangToggle className={`ml-2 mr-[20px]`} />
+      <div className={`container mx-auto px-3 flex flex-nowrap justify-between overflow-hidden`}>
+        <LogoInverted />
+        <div
+          className={`flex flex-nowrap items-center px-1 \
+                    bg-white bg-opacity-40 backdrop-filter backdrop-blur-2xl`}
+        >
+          <NavLink to={"/"} title={"TBD"} className={`p-2`}>
+            Übersicht
+          </NavLink>
+          <NavLink to={"/projekte"} title={"TBD"} className={`p-2`}>
+            Projekte
+          </NavLink>
+          <NavLink to={"/team"} title={"TBD"} className={`p-2`}>
+            Team
+          </NavLink>
+          <LinkButton to={"/kontakt"} title={"TBD"} className={`mx-2`}>
+            Kontakt
+          </LinkButton>
+          <NavLangToggle className={`ml-2 mr-[20px]`} />
+        </div>
       </div>
     </nav>
   );
