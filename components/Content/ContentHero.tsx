@@ -3,6 +3,7 @@ import { BaseComponentProps } from "../../helper/classNames";
 import Link from "next/link";
 import Heading from "@components/Text/Heading";
 import Copy from "@components/Text/Copy";
+import ContentImg from "@components/ContentImg";
 
 interface ContentHeroProps extends BaseComponentProps {}
 
@@ -10,10 +11,9 @@ const ContentHero: React.FC<ContentHeroProps> = (props) => {
   const { className } = props;
 
   return (
-    <header className={`container mx-auto px-2 lg-px-3 pt-15 lg:pt-25`}>
+    <header className={`container mx-auto px-2 lg:px-3 pt-15 lg:pt-25 space-y-4 lg:space-y-8`}>
       <div
-        className={`mb-4 lg:mb-8\
-                  lg:grid lg:grid-cols-8 lg:grid-rows-auto lg:auto-rows-min lg:auto-cols-min`}
+        className={`lg:grid lg:grid-cols-8 lg:grid-rows-auto lg:auto-rows-min lg:auto-cols-min`}
       >
         <Heading
           level={"2"}
@@ -27,30 +27,28 @@ const ContentHero: React.FC<ContentHeroProps> = (props) => {
         <Heading
           level={"hero"}
           type={"h2"}
-          className={`mb-2 lg:mb-0 \ lg:col-start-1 lg:col-end-7`}
+          className={`mb-2 lg:mb-0 \
+                    lg:col-start-1 lg:col-end-7`}
         >
           Digitale unterstützung für Schweizer Berufspiloten.
         </Heading>
         {/* Logo */}
         <div
-          className={`max-w-[200px] \
+          className={`max-w-[120px] lg:max-w-[200px] \
                     lg:max-w-none lg:col-start-8 lg:col-end-9 lg:self-end `}
         >
-          <div className="aspect-w-16 aspect-h-9 bg-indigo-100" />
+          <ContentImg imgUrl="https://www.aeropers.ch/templates/yootheme/cache/AP-Logo-web-b74fb585.webp" ratio="2/1" fill="contain" />
         </div>
       </div>
-      {/* Image */}
-      <div className={`mb-4 lg:mb-8`}>
-        <div className="aspect-w-16 aspect-h-9 bg-indigo-100" />
-      </div>
+      <ContentImg imgUrl="https://source.unsplash.com/2CnKn0BF9_A" ratio="2/1" fill="cover" />
       <div
-        className={`lg:grid lg:grid-cols-4 lg:grid-rows-auto lg:auto-rows-min`}
+        className={` space-y-2 lg:space-y-4 \
+                  lg:grid lg:grid-cols-4 lg:grid-rows-auto lg:auto-rows-min`}
       >
         <Copy
           level={"lead"}
           type="p"
-          className={`mb-2 lg:mb-4
-                    \ lg:col-start-1 lg:col-end-4`}
+          className={`lg:col-start-1 lg:col-end-4`}
         >
           Um die Flugsicherheit zu gewährleisten, müssen Pilotinnen und Piloten
           einen strikten Ruheplan einhalten. Die erlaubten Flugzeiten zu
@@ -61,8 +59,7 @@ const ContentHero: React.FC<ContentHeroProps> = (props) => {
         <Copy
           level={"lead"}
           type="p"
-          className={`mb-4 lg:mb-8
-                    \ lg:col-start-1 lg:col-end-4`}
+          className={`lg:col-start-1 lg:col-end-4`}
         >
           Um Pilotinnen und Piloten die Berechnung zu erleichtern, hat Konoma im
           Auftrag des Verbands{" "}

@@ -11,8 +11,9 @@ const SiteFooter: React.FC<SiteFooterProps> = (props) => {
 
   return (
     <footer
-      className={`flex flex-col mt-8 p-5 md:p-8 gap-4 \
-                bg-white border-t border-indigo-200
+      className={`flex flex-col gap-4 \
+                mt-6 lg:mt-10 2xl:mt-15 p-5 md:p-8 \
+                bg-white border-t border-indigo-200 \
                 ${className ?? ""}`}
     >
       <Logo />
