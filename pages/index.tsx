@@ -8,6 +8,7 @@ import ContentImgText from "@components/Content/ContentImgText";
 import ContentImg from "@components/ContentImg";
 import Heading from "@components/Text/Heading";
 import Copy from "@components/Text/Copy";
+import LinkCard from "@components/Navigation/LinkCard";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
             <Heading level="4" type="h4" colorBlue>Keine manuellen Berechnungen mehr</Heading>
             <Copy level="base">Auch die Darstellung längerer Ruhephasen (Rest Periods und Local Nights) ist minimalistisch einfach. Die Pilotinnen und Piloten wissen immer, wie lange ihre Pausen noch dauern: Ein einfaches Ampelsystem (Rot-Grün), ergänzt mit unmissverständlichen Icons, zeigt sofort, ob ein Flug zum aktuellen Zeitpunkt erlaubt ist.</Copy>
         </ContentImgText>
+        <LinkCard />
       <SiteFooter />
     </>
   );
