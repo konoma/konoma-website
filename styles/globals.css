@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global Font-Family */
 @layer base {
   @font-face {
     font-family: Cambon;
@@ -26,5 +27,15 @@
     font-weight: 600;
     src: url("/fonts/spezia/SpeziaWeb-SemiBold.woff2") format("woff2"),
       url("/fonts/spezia/SpeziaWeb-SemiBold.woff") format("woff");
+  }
+}
+
+/* Global Link Styling */
+@layer base {
+  a {
+    @apply text-blue-700 transition-colors;
+    @apply focus:outline-none focus:text-indigo-500;
+    @apply hover:text-indigo-700;
+    @apply active:text-indigo-900;
   }
 }
