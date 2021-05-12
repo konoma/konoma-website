@@ -20,11 +20,28 @@ export default function Home() {
       <NavDesktop />
       {/*<SiteHero />*/}
       <ContentHero />
-        <ContentImgText imgOrientation="right" image={<ContentImg imgUrl="https://source.unsplash.com/cUkjJQHmius" ratio="4/3" fill="cover" />}>
-            <Heading level="4" type="h4" colorBlue>Keine manuellen Berechnungen mehr</Heading>
-            <Copy level="base">Auch die Darstellung längerer Ruhephasen (Rest Periods und Local Nights) ist minimalistisch einfach. Die Pilotinnen und Piloten wissen immer, wie lange ihre Pausen noch dauern: Ein einfaches Ampelsystem (Rot-Grün), ergänzt mit unmissverständlichen Icons, zeigt sofort, ob ein Flug zum aktuellen Zeitpunkt erlaubt ist.</Copy>
-        </ContentImgText>
-        <LinkCard />
+      {/*<ContentImgText*/}
+      {/*  imgOrientation="right"*/}
+      {/*  image={*/}
+      {/*    <ContentImg*/}
+      {/*      imgUrl="/images/example-01.png"*/}
+      {/*      ratio="4/3"*/}
+      {/*      fill="cover"*/}
+      {/*    />*/}
+      {/*  }*/}
+      {/*>*/}
+      {/*  <Heading level="4" type="h4" colorBlue>*/}
+      {/*    Keine manuellen Berechnungen mehr*/}
+      {/*  </Heading>*/}
+      {/*  <Copy level="base">*/}
+      {/*    Auch die Darstellung längerer Ruhephasen (Rest Periods und Local*/}
+      {/*    Nights) ist minimalistisch einfach. Die Pilotinnen und Piloten wissen*/}
+      {/*    immer, wie lange ihre Pausen noch dauern: Ein einfaches Ampelsystem*/}
+      {/*    (Rot-Grün), ergänzt mit unmissverständlichen Icons, zeigt sofort, ob*/}
+      {/*    ein Flug zum aktuellen Zeitpunkt erlaubt ist.*/}
+      {/*  </Copy>*/}
+      {/*</ContentImgText>*/}
+      <LinkCard />
       <SiteFooter />
     </>
   );

@@ -4,6 +4,9 @@ module.exports = {
   darkMode: "media",
   theme: {
     extend: {
+      boxShadow: {
+        card: "0px 4px 12px rgba(53, 39, 140, 0.16)",
+      },
       colors: {
         indigo: {
           100: "#F0F0FF",
