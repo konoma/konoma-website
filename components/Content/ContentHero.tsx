@@ -11,13 +11,16 @@ const ContentHero: React.FC<ContentHeroProps> = (props) => {
   const { className } = props;
 
   return (
-    <header className={`container mx-auto px-2 lg:px-3 pt-15 lg:pt-25 space-y-4 lg:space-y-8`}>
+    <header
+      className={`container mx-auto px-2 lg:px-3 pt-15 lg:pt-25 space-y-4 lg:space-y-8`}
+    >
       <div
         className={`lg:grid lg:grid-cols-8 lg:grid-rows-auto lg:auto-rows-min lg:auto-cols-min`}
       >
         <Heading
           level={"2"}
           type={"h1"}
+          fontSerif
           colorBlue
           className={`mb-2 lg:mb-3 \ 
                     lg:col-start-1 lg:col-end-7`}
@@ -37,30 +40,31 @@ const ContentHero: React.FC<ContentHeroProps> = (props) => {
           className={`max-w-[120px] lg:max-w-[200px] \
                     lg:max-w-none lg:col-start-8 lg:col-end-9 lg:self-end `}
         >
-          <ContentImg imgUrl="https://www.aeropers.ch/templates/yootheme/cache/AP-Logo-web-b74fb585.webp" ratio="2/1" fill="contain" />
+          <ContentImg
+            imgUrl="/images/logo-aeropers.png"
+            ratio="2/1"
+            fill="contain"
+            imgAlt="Aeropers Logo"
+          />
         </div>
       </div>
-      <ContentImg imgUrl="https://source.unsplash.com/2CnKn0BF9_A" ratio="2/1" fill="cover" />
+      <ContentImg
+        imgUrl="/images/example-hero-01.png"
+        ratio="2/1"
+        fill="cover"
+      />
       <div
         className={` space-y-2 lg:space-y-4 \
                   lg:grid lg:grid-cols-4 lg:grid-rows-auto lg:auto-rows-min`}
       >
-        <Copy
-          level={"lead"}
-          type="p"
-          className={`lg:col-start-1 lg:col-end-4`}
-        >
+        <Copy level={"lead"} type="p" className={`lg:col-start-1 lg:col-end-4`}>
           Um die Flugsicherheit zu gewährleisten, müssen Pilotinnen und Piloten
           einen strikten Ruheplan einhalten. Die erlaubten Flugzeiten zu
           berechnen, ist komplex. Regelwerke vom Verband Aeropers und
           internationalen Organisationen wie der European Air and Safety
           Authority (EASA) müssen berücksichtigt werden.
         </Copy>
-        <Copy
-          level={"lead"}
-          type="p"
-          className={`lg:col-start-1 lg:col-end-4`}
-        >
+        <Copy level={"lead"} type="p" className={`lg:col-start-1 lg:col-end-4`}>
           Um Pilotinnen und Piloten die Berechnung zu erleichtern, hat Konoma im
           Auftrag des Verbands{" "}
           <Link href="#">

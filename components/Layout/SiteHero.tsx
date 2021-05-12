@@ -3,6 +3,7 @@ import { BaseComponentProps } from "../../helper/classNames";
 import Heading from "@components/Text/Heading";
 import ListServices from "@components/ListServices";
 import Copy from "@components/Text/Copy";
+import ContentImg from "@components/ContentImg";
 
 interface SiteHeroProps extends BaseComponentProps {}
 
@@ -33,12 +34,23 @@ const SiteHero: React.FC<SiteHeroProps> = (props) => {
       <div
         className={`lg:col-start-3 lg:col-end-5 lg:row-start-2 lg:row-end-5 mb-4 lg:mb-0 3xl:transform 3xl:translate-x-10`}
       >
-        <div className={`aspect-w-1 aspect-h-1 bg-indigo-100`} />
+        <ContentImg
+          imgUrl="/images/main-hero-01.png"
+          ratio="1/1"
+          fill="contain"
+          imgAlt="Aeropers Logo"
+        />
       </div>
       <div
         className={`lg:col-start-1 lg:col-end-3 lg:row-start-3 lg:row-end-5 3xl:col-end-4`}
       >
-        <Heading level="2" type="h3" colorBlue className={`mb-4 lg:mb-6`}>
+        <Heading
+          level="2"
+          type="h3"
+          fontSerif
+          colorBlue
+          className={`mb-4 lg:mb-6`}
+        >
           Unsere Leidenschaft
         </Heading>
         <ListServices />
