@@ -9,6 +9,7 @@ import ContentImg from "@components/ContentImg";
 import Heading from "@components/Text/Heading";
 import Copy from "@components/Text/Copy";
 import LinkCard from "@components/Navigation/LinkCard";
+import ProjectTeaser from "@components/ProjectTeaser";
 
 export default function Home() {
   return (
@@ -41,7 +42,18 @@ export default function Home() {
       {/*    ein Flug zum aktuellen Zeitpunkt erlaubt ist.*/}
       {/*  </Copy>*/}
       {/*</ContentImgText>*/}
-      <LinkCard />
+      <ProjectTeaser title="Weitere Arbeiten">
+        <LinkCard
+          label="Aeropers App - Community"
+          title="Wie kann die tägliche Arbeit der Pilot*innen …"
+          to="#"
+        />
+        <LinkCard
+          label="Aargau Tourismus"
+          title="Geschäftsmodell in Zeiten von Corona"
+          to="#"
+        />
+      </ProjectTeaser>
       <SiteFooter />
     </>
   );
