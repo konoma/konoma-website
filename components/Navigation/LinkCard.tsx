@@ -22,10 +22,10 @@ const LinkCard: React.FC<LinkCardProps> = (props) => {
                     ${className ?? ""}`}
       >
         <span className={`flex-1 space-y-2 lg:space-y-5`}>
-          <Heading level="4" type="h6" fontSerif colorBlue>
+          <Heading level="4" type="h4" fontSerif color="indigo">
             {label}
           </Heading>
-          <Heading level="2" type="h5">
+          <Heading level="2" type="h3" color="gray">
             {title}
           </Heading>
         </span>

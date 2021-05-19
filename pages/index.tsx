@@ -10,6 +10,7 @@ import Heading from "@components/Text/Heading";
 import Copy from "@components/Text/Copy";
 import LinkCard from "@components/Navigation/LinkCard";
 import ProjectTeaser from "@components/ProjectTeaser";
+import ContactTeaser from "@components/ContactTeaser";
 
 export default function Home() {
   return (
@@ -54,7 +55,12 @@ export default function Home() {
           to="#"
         />
       </ProjectTeaser>
-      <SiteFooter />
+      <ContactTeaser
+        title="Lassen Sie uns Ihre Zukunft angehen"
+        lead="Das Merkwürdige an der Zukunft ist wohl die Vorstellung, dass man unsere Zeit einmal die gute alte Zeit nennen wird."
+        link={{ text: "Kontaktieren Sie uns", to: "#" }}
+      />
+      <SiteFooter className={`mt-0 lg:mt-0 2xl:mt-0`} />
     </>
   );
 }

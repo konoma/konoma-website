@@ -21,7 +21,7 @@ const ContentHero: React.FC<ContentHeroProps> = (props) => {
           level={"2"}
           type={"h1"}
           fontSerif
-          colorBlue
+          color="indigo"
           className={`mb-2 lg:mb-3 \ 
                     lg:col-start-1 lg:col-end-7`}
         >
@@ -30,6 +30,7 @@ const ContentHero: React.FC<ContentHeroProps> = (props) => {
         <Heading
           level={"hero"}
           type={"h2"}
+          color="gray"
           className={`mb-2 lg:mb-0 \
                     lg:col-start-1 lg:col-end-7`}
         >
@@ -57,14 +58,22 @@ const ContentHero: React.FC<ContentHeroProps> = (props) => {
         className={` space-y-2 lg:space-y-4 \
                   lg:grid lg:grid-cols-4 lg:grid-rows-auto lg:auto-rows-min`}
       >
-        <Copy level={"lead"} type="p" className={`lg:col-start-1 lg:col-end-4`}>
+        <Copy
+          level="lead"
+          color="gray"
+          className={`lg:col-start-1 lg:col-end-4`}
+        >
           Um die Flugsicherheit zu gewährleisten, müssen Pilotinnen und Piloten
           einen strikten Ruheplan einhalten. Die erlaubten Flugzeiten zu
           berechnen, ist komplex. Regelwerke vom Verband Aeropers und
           internationalen Organisationen wie der European Air and Safety
           Authority (EASA) müssen berücksichtigt werden.
         </Copy>
-        <Copy level={"lead"} type="p" className={`lg:col-start-1 lg:col-end-4`}>
+        <Copy
+          level="lead"
+          color="gray"
+          className={`lg:col-start-1 lg:col-end-4`}
+        >
           Um Pilotinnen und Piloten die Berechnung zu erleichtern, hat Konoma im
           Auftrag des Verbands{" "}
           <Link href="#">
