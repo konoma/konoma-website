@@ -4,33 +4,35 @@ import { BaseComponentProps } from "../../helper/classNames";
 interface CopyProps extends BaseComponentProps {
   type?: string;
   level?: "xs" | "sm" | "base" | "lead";
+  color: "gray" | "indigo" | "white";
 }
 const Copy: React.FC<CopyProps> = (props) => {
-  const { className, level, type, children } = props;
+  const { className, level, type, color, children } = props;
   const Element = type ?? ("p" as React.ElementType);
   const CopyLevel = level ?? "base";
 
   return (
     <Element
-      className={`${
-        CopyLevel === "xs" ? "font-sans font-normal text-xs text-gray-900" : ""
-      } \
+      className={`${CopyLevel === "xs" ? "font-sans font-normal text-xs" : ""} \
        ${
          CopyLevel === "sm"
-           ? "font-sans font-normal text-sm lg:text-sm-desktop text-gray-900"
+           ? "font-sans font-normal text-sm lg:text-sm-desktop"
            : ""
        } \
        ${
          CopyLevel === "base"
-           ? "font-sans font-medium text-base lg:text-base-desktop text-gray-900"
+           ? "font-sans font-medium text-base lg:text-base-desktop"
            : ""
        } \
        ${
          CopyLevel === "lead"
-           ? "font-sans font-medium text-lg lg:text-lg-desktop text-gray-900"
+           ? "font-sans font-medium text-lg lg:text-lg-desktop"
            : ""
-       } \
-       ${className ?? ""}`}
+       } 
+        ${color === "gray" ? "text-gray-900" : ""}
+        ${color === "indigo" ? "text-indigo-700" : ""}
+        ${color === "white" ? "text-white" : ""}
+        ${className ?? ""}`}
     >
       {children}
     </Element>

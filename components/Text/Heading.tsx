@@ -4,11 +4,11 @@ import { BaseComponentProps } from "../../helper/classNames";
 interface HeadingProps extends BaseComponentProps {
   type?: string;
   level: "hero" | "1" | "2" | "3" | "4";
+  color: "gray" | "indigo" | "white";
   fontSerif?: boolean;
-  colorBlue?: boolean;
 }
 const Heading: React.FC<HeadingProps> = (props) => {
-  const { className, level, type, children, fontSerif, colorBlue } = props;
+  const { className, level, type, color, fontSerif, children } = props;
   const Element = type ?? ("span" as React.ElementType);
 
   return (
@@ -23,7 +23,9 @@ const Heading: React.FC<HeadingProps> = (props) => {
                     ? "font-serif font-bold"
                     : "font-sans font-semibold"
                 }
-                ${colorBlue === true ? "text-indigo-700" : "text-gray-900"}
+                ${color === "gray" ? "text-gray-900" : ""}
+                ${color === "indigo" ? "text-indigo-700" : ""}
+                ${color === "white" ? "text-white" : ""}
                 ${className ?? ""}`}
     >
       {children}
