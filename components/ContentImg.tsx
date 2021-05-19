@@ -9,17 +9,17 @@ interface ContentImgProps extends BaseComponentProps {
   fill: "cover" | "contain";
 }
 
+const RATIOS = {
+  "4/3": "aspect-w-4 aspect-h-3",
+  "2/1": "aspect-w-2 aspect-h-1",
+  "1/1": "aspect-w-1 aspect-h-1",
+};
+
 const ContentImg: React.FC<ContentImgProps> = (props) => {
   const { className, imgUrl, imgAlt, ratio, fill } = props;
 
   return (
-    <div
-      className={`${ratio === "4/3" ? "aspect-w-4 aspect-h-3" : ""}
-                        ${ratio === "2/1" ? "aspect-w-2 aspect-h-1" : ""}
-                        ${ratio === "1/1" ? "aspect-w-1 aspect-h-1" : ""}
-                        ${className ?? ""}        
-        `}
-    >
+    <div className={`${RATIOS[ratio]} ${className ?? ""}`}>
       <Image
         src={imgUrl}
         alt={imgAlt}
