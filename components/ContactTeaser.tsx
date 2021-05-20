@@ -19,7 +19,7 @@ const ContactTeaser: React.FC<ContactTeaserProps> = (props) => {
 
   return (
     <section
-      className={`bg-indigo-900 text-white mt-6 lg:mt-10 2xl:mt-15 py-8 lg:py-15 2xl:py-25
+      className={`bg-indigo-900 text-white py-8 lg:py-15 2xl:py-25
                 ${className ?? ""}`}
     >
       <div

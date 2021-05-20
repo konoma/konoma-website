@@ -20,7 +20,7 @@ const CustomerList: React.FC<CustomerListProps> = (props) => {
 
   return (
     <section
-      className={`container mx-auto px-2 lg:px-3 mt-6 lg:mt-10 2xl:mt-15 \
+      className={`container mx-auto px-2 lg:px-3 \
                 lg:grid lg:grid-cols-4 lg:gap-3
                 ${className ?? ""}`}
     >

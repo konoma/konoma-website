@@ -3,7 +3,7 @@ import Image from "next/image";
 import { BaseComponentProps } from "../helper/classNames";
 
 interface ContentImgProps extends BaseComponentProps {
-  imgUrl?: string;
+  imgUrl: string;
   imgAlt?: string;
   ratio: "4/3" | "2/1" | "1/1";
   fill: "cover" | "contain";

@@ -12,7 +12,7 @@ const ProjectTeaser: React.FC<ProjectTeaserProps> = (props) => {
 
   return (
     <section
-      className={`container mx-auto px-2 lg:px-3 mt-6 lg:mt-10 2xl:mt-15 space-y-3 lg:space-y-4
+      className={`container mx-auto px-2 lg:px-3 space-y-3 lg:space-y-4
                 ${className ?? ""}`}
     >
       <Heading level="4" type="h4" color="indigo">

@@ -12,7 +12,7 @@ const SiteHero: React.FC<SiteHeroProps> = (props) => {
 
   return (
     <header
-      className={`container mx-auto px-2 lg:px-3 pt-15 lg:pt-25 \
+      className={`container mx-auto px-2 lg:px-3 \
                 lg:grid lg:grid-cols-4 lg:grid-rows-4 lg:auto-rows-min lg:gap-x-3 lg:content-start \
                 ${className ?? ""}`}
     >

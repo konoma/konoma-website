@@ -11,9 +11,7 @@ const ContentHero: React.FC<ContentHeroProps> = (props) => {
   const { className } = props;
 
   return (
-    <header
-      className={`container mx-auto px-2 lg:px-3 pt-15 lg:pt-25 space-y-4 lg:space-y-8`}
-    >
+    <header className={`container mx-auto px-2 lg:px-3 space-y-4 lg:space-y-8`}>
       <div
         className={`lg:grid lg:grid-cols-8 lg:grid-rows-auto lg:auto-rows-min lg:auto-cols-min`}
       >
