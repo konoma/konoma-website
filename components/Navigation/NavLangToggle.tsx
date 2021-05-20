@@ -7,7 +7,7 @@ interface NavLangToggleProps extends BaseComponentProps {}
 const NavLangToggle: React.FC<NavLangToggleProps> = (props) => {
   const { className } = props;
 
-  // Router Definition based on i18n > https://nextjs.org/docs/advanced-features/i18n-routing
+  // todo: router Definition based on i18n > https://nextjs.org/docs/advanced-features/i18n-routing
 
   return (
     <div

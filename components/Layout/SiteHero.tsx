@@ -10,6 +10,8 @@ interface SiteHeroProps extends BaseComponentProps {}
 const SiteHero: React.FC<SiteHeroProps> = (props) => {
   const { className } = props;
 
+  //  todo: Defining props and assigning them
+
   return (
     <header
       className={`container mx-auto px-2 lg:px-3 \

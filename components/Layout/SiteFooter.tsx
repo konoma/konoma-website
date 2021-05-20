@@ -10,6 +10,7 @@ const SiteFooter: React.FC<SiteFooterProps> = (props) => {
   const { className } = props;
 
   return (
+    //  todo: Defining props and assigning them
     <footer
       className={`flex flex-col gap-4 \
                 mt-6 lg:mt-10 2xl:mt-15 p-5 md:p-8 \
