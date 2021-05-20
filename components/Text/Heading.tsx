@@ -4,7 +4,7 @@ import { BaseComponentProps } from "../../helper/classNames";
 interface HeadingProps extends BaseComponentProps {
   type?: string;
   level: "hero" | "1" | "2" | "3" | "4";
-  color: "gray" | "indigo" | "white";
+  color: "grey" | "indigo" | "white";
   fontSerif?: boolean;
 }
 const Heading: React.FC<HeadingProps> = (props) => {
@@ -23,7 +23,7 @@ const Heading: React.FC<HeadingProps> = (props) => {
                     ? "font-serif font-bold"
                     : "font-sans font-semibold"
                 }
-                ${color === "gray" ? "text-gray-900" : ""}
+                ${color === "grey" ? "text-grey-900" : ""}
                 ${color === "indigo" ? "text-indigo-700" : ""}
                 ${color === "white" ? "text-white" : ""}
                 ${className ?? ""}`}

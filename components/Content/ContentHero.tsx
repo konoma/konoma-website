@@ -30,7 +30,7 @@ const ContentHero: React.FC<ContentHeroProps> = (props) => {
         <Heading
           level={"hero"}
           type={"h2"}
-          color="gray"
+          color="grey"
           className={`mb-2 lg:mb-0 \
                     lg:col-start-1 lg:col-end-7`}
         >
@@ -60,7 +60,7 @@ const ContentHero: React.FC<ContentHeroProps> = (props) => {
       >
         <Copy
           level="lead"
-          color="gray"
+          color="grey"
           className={`lg:col-start-1 lg:col-end-4`}
         >
           Um die Flugsicherheit zu gewährleisten, müssen Pilotinnen und Piloten
@@ -71,7 +71,7 @@ const ContentHero: React.FC<ContentHeroProps> = (props) => {
         </Copy>
         <Copy
           level="lead"
-          color="gray"
+          color="grey"
           className={`lg:col-start-1 lg:col-end-4`}
         >
           Um Pilotinnen und Piloten die Berechnung zu erleichtern, hat Konoma im

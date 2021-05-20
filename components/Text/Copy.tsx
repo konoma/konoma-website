@@ -4,7 +4,7 @@ import { BaseComponentProps } from "../../helper/classNames";
 interface CopyProps extends BaseComponentProps {
   type?: string;
   level?: "xs" | "sm" | "base" | "lead";
-  color: "gray" | "indigo" | "white";
+  color: "grey" | "grey-anthracite" | "indigo" | "white";
 }
 const Copy: React.FC<CopyProps> = (props) => {
   const { className, level, type, color, children } = props;
@@ -29,7 +29,8 @@ const Copy: React.FC<CopyProps> = (props) => {
            ? "font-sans font-medium text-lg lg:text-lg-desktop"
            : ""
        } 
-        ${color === "gray" ? "text-gray-900" : ""}
+        ${color === "grey" ? "text-grey-900" : ""}
+        ${color === "grey-anthracite" ? "text-grey-700" : ""}
         ${color === "indigo" ? "text-indigo-700" : ""}
         ${color === "white" ? "text-white" : ""}
         ${className ?? ""}`}

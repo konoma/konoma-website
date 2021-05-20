@@ -15,7 +15,7 @@ const ListIcon: React.FC<ListIconProps> = (props) => {
                         ${className ?? ""}`}
     >
       <span className={`flex-none w-5 md:w-7 h-5 md:h-7`}>{icon}</span>
-      <Copy type={"span"} className={`flex-auto leading-tight`}>
+      <Copy type="span" color="grey" className={`flex-auto leading-tight`}>
         {children}
       </Copy>
     </li>

@@ -19,14 +19,14 @@ const SiteHero: React.FC<SiteHeroProps> = (props) => {
       <Heading
         level="hero"
         type="h1"
-        color="gray"
+        color="grey"
         className={`lg:col-start-1 lg:col-end-4 lg:row-start-1 lg-row-end-2 mb-4 lg:mb-8`}
       >
         Wir gestalten gemeinsam Ihren Erfolg in der Welt von morgen.
       </Heading>
       <Copy
         level={"base"}
-        color="gray"
+        color="grey"
         className={`lg:col-start-1 lg:col-end-3 lg:row-start-2 lg-row-end-3 mb-4 lg:mb-8`}
       >
         Um dies zu erreichen, gestalten wir zusammen Ihre Zukunft und gehen mit

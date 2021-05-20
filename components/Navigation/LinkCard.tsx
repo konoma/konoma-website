@@ -25,7 +25,7 @@ const LinkCard: React.FC<LinkCardProps> = (props) => {
           <Heading level="4" type="h4" fontSerif color="indigo">
             {label}
           </Heading>
-          <Heading level="2" type="h3" color="gray">
+          <Heading level="2" type="h3" color="grey">
             {title}
           </Heading>
         </span>

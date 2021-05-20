@@ -26,16 +26,18 @@ const SiteFooter: React.FC<SiteFooterProps> = (props) => {
         className={`flex flex-nowrap flex-col md:flex-row justify-center items-center`}
       >
         <LinkIcon
-          text={"info@konoma.ch"}
-          to={"mailto:info@konoma.ch"}
-          type={"internal"}
+          text="info@konoma.ch"
+          to="mailto:info@konoma.ch"
+          type="internal"
+          color="blue"
           className={`flex-initial p-0.5 md:p-2`}
           iconLeft={<IconMail className={`flex-initial w-3 h-3 mr-1`} />}
         />
         <LinkIcon
-          text={"Kontakt"}
-          to={"/kontakt"}
-          type={"internal"}
+          text="Kontakt"
+          to="/kontakt"
+          type="internal"
+          color="blue"
           className={`flex-initial p-0.5 md:p-2`}
           iconLeft={<IconArrow className={`flex-initial w-3 h-3 mr-1`} />}
         />
