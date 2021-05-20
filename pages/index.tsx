@@ -11,6 +11,7 @@ import Copy from "@components/Text/Copy";
 import LinkCard from "@components/Navigation/LinkCard";
 import ProjectTeaser from "@components/ProjectTeaser";
 import ContactTeaser from "@components/ContactTeaser";
+import CustomerList from "@components/CustomerList";
 
 export default function Home() {
   return (
@@ -20,8 +21,8 @@ export default function Home() {
       </Head>
       <NavMobile />
       <NavDesktop />
-      {/*<SiteHero />*/}
-      <ContentHero />
+      <SiteHero />
+      {/*<ContentHero />*/}
       {/*<ContentImgText*/}
       {/*  imgOrientation="right"*/}
       {/*  image={*/}
@@ -32,10 +33,10 @@ export default function Home() {
       {/*    />*/}
       {/*  }*/}
       {/*>*/}
-      {/*  <Heading level="4" type="h4" colorBlue>*/}
+      {/*  <Heading level="4" type="h4" color="indigo">*/}
       {/*    Keine manuellen Berechnungen mehr*/}
       {/*  </Heading>*/}
-      {/*  <Copy level="base">*/}
+      {/*  <Copy level="base" color="gray">*/}
       {/*    Auch die Darstellung längerer Ruhephasen (Rest Periods und Local*/}
       {/*    Nights) ist minimalistisch einfach. Die Pilotinnen und Piloten wissen*/}
       {/*    immer, wie lange ihre Pausen noch dauern: Ein einfaches Ampelsystem*/}
@@ -43,24 +44,26 @@ export default function Home() {
       {/*    ein Flug zum aktuellen Zeitpunkt erlaubt ist.*/}
       {/*  </Copy>*/}
       {/*</ContentImgText>*/}
-      <ProjectTeaser title="Weitere Arbeiten">
-        <LinkCard
-          label="Aeropers App - Community"
-          title="Wie kann die tägliche Arbeit der Pilot*innen …"
-          to="#"
-        />
-        <LinkCard
-          label="Aargau Tourismus"
-          title="Geschäftsmodell in Zeiten von Corona"
-          to="#"
-        />
-      </ProjectTeaser>
-      <ContactTeaser
-        title="Lassen Sie uns Ihre Zukunft angehen"
-        lead="Das Merkwürdige an der Zukunft ist wohl die Vorstellung, dass man unsere Zeit einmal die gute alte Zeit nennen wird."
-        link={{ text: "Kontaktieren Sie uns", to: "#" }}
-      />
-      <SiteFooter className={`mt-0 lg:mt-0 2xl:mt-0`} />
+      {/*<ProjectTeaser title="Weitere Arbeiten">*/}
+      {/*  <LinkCard*/}
+      {/*    label="Aeropers App - Community"*/}
+      {/*    title="Wie kann die tägliche Arbeit der Pilot*innen …"*/}
+      {/*    to="#"*/}
+      {/*  />*/}
+      {/*  <LinkCard*/}
+      {/*    label="Aargau Tourismus"*/}
+      {/*    title="Geschäftsmodell in Zeiten von Corona"*/}
+      {/*    to="#"*/}
+      {/*  />*/}
+      {/*</ProjectTeaser>*/}
+      {/*<ContactTeaser*/}
+      {/*  title="Lassen Sie uns Ihre Zukunft angehen"*/}
+      {/*  lead="Das Merkwürdige an der Zukunft ist wohl die Vorstellung, dass man unsere Zeit einmal die gute alte Zeit nennen wird."*/}
+      {/*  link={{ text: "Kontaktieren Sie uns", to: "#" }}*/}
+      {/*/>*/}
+
+      <CustomerList title="Weitere Kund:innen, mit denen wir zusammenarbeiten dürfen." />
+      <SiteFooter />
     </>
   );
 }
