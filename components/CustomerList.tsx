@@ -36,7 +36,7 @@ const CustomerList: React.FC<CustomerListProps> = (props) => {
       {/* todo: loop of topcustomer */}
       <div
         className={`sm:col-span-3 \
-                  grid grid-cols-2 sm:grid-cols-3 gap-3 mt-2 md:mt-5`}
+                  grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-6 mt-2 md:mt-5`}
       >
         <ContentImg
           ratio="2/1"
@@ -73,7 +73,7 @@ const CustomerList: React.FC<CustomerListProps> = (props) => {
       {/* todo: loop of customer */}
       <div
         className={`md:col-span-3 \
-                  grid grid-cols-3 sm:grid-cols-6 gap-3 mt-5 md:mt-8`}
+                  grid grid-cols-3 sm:grid-cols-6 gap-3 md:gap-6 mt-5 md:mt-8`}
       >
         <ContentImg
           ratio="2/1"
