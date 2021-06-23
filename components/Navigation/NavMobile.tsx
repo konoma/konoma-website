@@ -1,5 +1,5 @@
 import LogoInverted from '@components/LogoInverted';
-import NavLangToggle from '@components/Navigation/NavLangToggle';
+import LanguageSwitcher from '@components/Navigation/LanguageSwitcher';
 import NavLink from '@components/Navigation/NavLink';
 import { BaseComponentProps } from 'helper/classNames';
 import React, { useState } from 'react';
@@ -42,7 +42,7 @@ const NavMobile: React.FC<NavMobileProps> = (props) => {
           Kontakt
         </NavLink>
 
-        <NavLangToggle currentPagePerLocale={currentPagePerLocale} />
+        <LanguageSwitcher currentPagePerLocale={currentPagePerLocale} />
       </div>
     </nav>
   );

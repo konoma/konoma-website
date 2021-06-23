@@ -1,6 +1,6 @@
 import LogoInverted from '@components/LogoInverted';
 import LinkButton from '@components/Navigation/LinkButton';
-import NavLangToggle from '@components/Navigation/NavLangToggle';
+import LanguageSwitcher from '@components/Navigation/LanguageSwitcher';
 import NavLink from '@components/Navigation/NavLink';
 import React from 'react';
 import { LocaleAndValue } from '../../@types';
@@ -37,7 +37,7 @@ const NavDesktop: React.FC<NavDesktopProps> = (props) => {
             Kontakt
           </LinkButton>
 
-          <NavLangToggle currentPagePerLocale={currentPagePerLocale} className={`ml-2 mr-[20px]`} />
+          <LanguageSwitcher currentPagePerLocale={currentPagePerLocale} className={`ml-2 mr-[20px]`} />
         </div>
       </div>
     </nav>

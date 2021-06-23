@@ -4,11 +4,11 @@ import React from 'react';
 import { LocaleAndValue } from '../../@types';
 import { BaseComponentProps } from '../../helper/classNames';
 
-interface NavLangToggleProps extends BaseComponentProps {
+interface LanguageSwitcherProps extends BaseComponentProps {
   currentPagePerLocale: LocaleAndValue[];
 }
 
-const NavLangToggle: React.FC<NavLangToggleProps> = (props) => {
+const LanguageSwitcher: React.FC<LanguageSwitcherProps> = (props) => {
   const { currentPagePerLocale, className } = props;
   const router = useRouter();
 
@@ -38,4 +38,4 @@ const NavLangToggle: React.FC<NavLangToggleProps> = (props) => {
   return <div className={`flex flex-nowrap text-sm ${className ?? ''}`}>{languageLinks}</div>;
 };
 
-export default NavLangToggle;
+export default LanguageSwitcher;
