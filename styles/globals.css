@@ -10,18 +10,21 @@
     src: url("/fonts/cambon/Cambon-Bold.woff2") format("woff2"),
       url("/fonts/cambon/Cambon-Bold.woff") format("woff");
   }
+
   @font-face {
     font-family: Spezia;
     font-weight: 400;
     src: url("/fonts/spezia/SpeziaWeb-Regular.woff2") format("woff2"),
       url("/fonts/spezia/SpeziaWeb-Regular.woff") format("woff");
   }
+
   @font-face {
     font-family: Spezia;
     font-weight: 500;
     src: url("/fonts/spezia/SpeziaWeb-Medium.woff2") format("woff2"),
       url("/fonts/spezia/SpeziaWeb-Medium.woff") format("woff");
   }
+
   @font-face {
     font-family: Spezia;
     font-weight: 600;
@@ -38,4 +41,11 @@
     @apply hover:text-indigo-700;
     @apply active:text-indigo-900;
   }
+}
+
+html,
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

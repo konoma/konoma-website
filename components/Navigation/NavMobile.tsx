@@ -3,14 +3,15 @@ import NavLangToggle from '@components/Navigation/NavLangToggle';
 import NavLink from '@components/Navigation/NavLink';
 import { BaseComponentProps } from 'helper/classNames';
 import React, { useState } from 'react';
+import { LocaleAndValue } from '../../@types';
 import NavMobileButton from './NavMobileButton';
 
 interface NavMobileProps extends BaseComponentProps {
-  buttonClassNames?: string;
+  currentPagePerLocale: LocaleAndValue[];
 }
 
 const NavMobile: React.FC<NavMobileProps> = (props) => {
-  const { className } = props;
+  const { currentPagePerLocale, className } = props;
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -41,7 +42,7 @@ const NavMobile: React.FC<NavMobileProps> = (props) => {
           Kontakt
         </NavLink>
 
-        <NavLangToggle />
+        <NavLangToggle currentPagePerLocale={currentPagePerLocale} />
       </div>
     </nav>
   );
