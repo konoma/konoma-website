@@ -10,10 +10,10 @@ interface NavLinkProps extends BaseComponentProps {
 }
 
 const NavLink: React.FC<NavLinkProps> = (props) => {
-  const { className, to, title, children } = props;
+  const { className, to, title } = props;
 
   const router = useRouter();
-  const isActive = router.pathname.startsWith(to);
+  const isActive = to.startsWith(router.pathname);
 
   return (
     <Link href={to} passHref>
@@ -27,10 +27,10 @@ const NavLink: React.FC<NavLinkProps> = (props) => {
       >
         <span className={`w-3 h-[2px] mb-0.5 bg-transparent`} />
 
-        {children}
+        <span>{title}</span>
 
         <span
-          className={`w-3 h-[2px] mt-0.5 bg-current \
+          className={`w-4 h-[2px] mt-0.5 bg-current \
                     group-hover:opacity-100 group-active:opacity-0 transition-opacity \
                     ${isActive ? 'opacity-100' : 'opacity-0'}`}
         />

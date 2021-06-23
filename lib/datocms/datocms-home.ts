@@ -1,4 +1,5 @@
 import { fetchAPI, FRAGMENT_COMPANY_INFORMATION, FRAGMENT_SLUG_LOCALES, FRAGMENT_TAG } from '@lib/datocms/datocms-common';
+import { DatoCMSResponse } from '../../@types';
 
 export const getHomePageAndSite = async (locale: string, preview: boolean): Promise<DatoCMSResponse> => {
   return fetchAPI<DatoCMSResponse>(

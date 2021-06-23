@@ -14,6 +14,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = (props) => {
 
   const languageLinks = currentPagePerLocale
     .map<React.ReactNode>((pagePerLocale) => {
+      const isActiveLocale = pagePerLocale.locale === router.locale;
       return (
         <Link href={pagePerLocale.value}>
           <a
@@ -21,7 +22,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = (props) => {
                     px-0.5
                     font-semibold 
                     ${
-                      pagePerLocale.locale === router.locale
+                      isActiveLocale
                         ? 'text-grey-700 hover:text-grey-700 focus:text-grey-700 active:text-grey-700'
                         : 'text-grey-900 hover:text-indigo-500 focus:text-indigo-500 active:text-indigo-900'
                     }
@@ -35,7 +36,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = (props) => {
     })
     .reduce((prev, curr) => [prev, <span className="mx-0.5">/</span>, curr]);
 
-  return <div className={`flex flex-nowrap text-sm ${className ?? ''}`}>{languageLinks}</div>;
+  return <div className={`${className ?? ''}`}>{languageLinks}</div>;
 };
 
 export default LanguageSwitcher;

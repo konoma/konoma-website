@@ -1,8 +1,8 @@
-import React from "react";
-import { BaseComponentProps } from "helper/classNames";
-import Logo from "@components/Logo";
-import LinkIcon from "@components/Navigation/LinkIcon";
-import { IconMail, IconArrow } from "@components/icons";
+import React from 'react';
+import { BaseComponentProps } from 'helper/classNames';
+import KonomaLogoInverted from '@components/KonomaLogoInverted';
+import LinkIcon from '@components/Navigation/LinkIcon';
+import { IconMail, IconArrow } from '@components/icons';
 
 interface SiteFooterProps extends BaseComponentProps {}
 
@@ -15,17 +15,15 @@ const SiteFooter: React.FC<SiteFooterProps> = (props) => {
       className={`flex flex-col gap-4 \
                 mt-6 lg:mt-10 2xl:mt-15 p-5 md:p-8 \
                 bg-white border-t border-indigo-200 \
-                ${className ?? ""}`}
+                ${className ?? ''}`}
     >
-      <Logo />
+      <KonomaLogoInverted />
       <div className={`font-sans font-medium text-sm text-center`}>
         Konoma GmbH, <br className="md:hidden" />
         Rütistrasse 6, <br className="md:hidden" />
         5400 Baden, Schweiz
       </div>
-      <div
-        className={`flex flex-nowrap flex-col md:flex-row justify-center items-center`}
-      >
+      <div className={`flex flex-nowrap flex-col md:flex-row justify-center items-center`}>
         <LinkIcon
           text="info@konoma.ch"
           to="mailto:info@konoma.ch"
