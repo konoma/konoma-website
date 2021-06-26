@@ -4,10 +4,10 @@ import NavLink from '@components/Navigation/NavLink';
 import NavMobileButton from '@components/Navigation/NavMobileButton';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { LocaleAndValue } from '../../@types';
+import { LocaleAndValueType } from '../../@types';
 
 interface HeaderProps {
-  currentPagePerLocale: LocaleAndValue[];
+  currentPagePerLocale: LocaleAndValueType[];
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = (props) => {
             absolute md:relative
             top-21 md:top-0 left-0 right-0 bottom-0 z-20
             w-full md:w-auto
-            flex-col justify-center align-middle space-y-8
+            flex-col items-center space-y-8
             md:flex md:flex-row md:space-x-8 md:space-y-0
             md:px-8
             bg-white md:bg-transparent
@@ -39,9 +39,7 @@ const Header: React.FC<HeaderProps> = (props) => {
           <NavLink key="team" to={'/'} title={t('Team')} />
           <NavLink key="contact" to={'/'} title={t('Contact')} />
 
-          <div className="flex flex-col justify-center align-middle mx-auto">
-            <LanguageSwitcher currentPagePerLocale={currentPagePerLocale} />
-          </div>
+          <LanguageSwitcher currentPagePerLocale={currentPagePerLocale} />
         </nav>
       </header>
     </>

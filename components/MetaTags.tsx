@@ -3,11 +3,12 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { renderMetaTags } from 'react-datocms';
 import { SeoMetaTagType } from 'react-datocms/dist/types/Seo';
+import { LocaleAndValueType } from '../@types';
 
 interface MetaTagsProps {
   seoMetaTags: SeoMetaTagType[];
   faviconMetaTags: SeoMetaTagType[];
-  currentPagePerLocal: LocaleAndValue[];
+  currentPagePerLocal: LocaleAndValueType[];
 }
 
 const MetaTags = ({ seoMetaTags, faviconMetaTags, currentPagePerLocal }: MetaTagsProps) => {

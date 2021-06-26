@@ -1,14 +1,11 @@
-import SiteContent from '@components/Layout/SiteContent';
 import SiteFooter from '@components/Layout/SiteFooter';
 import MetaTags from '@components/MetaTags';
-import NavDesktop from '@components/Navigation/NavDesktop';
 import Header from '@components/Header/Header';
-import NavMobile from '@components/Navigation/NavMobile';
 import React from 'react';
-import { DatoCMSResponse } from '../../@types';
+import { DatoCMSResponseType } from '../../@types';
 
 interface BasePageProps {
-  pageAndSite: DatoCMSResponse;
+  pageAndSite: DatoCMSResponseType<any>;
   children: React.ReactNode;
 }
 
@@ -25,11 +22,11 @@ const BasePage: React.FC<BasePageProps> = (props) => {
 
       <Header currentPagePerLocale={pagePerLocales} />
 
-      <SiteContent>
+      <div>
         {children}
 
         <SiteFooter />
-      </SiteContent>
+      </div>
     </>
   );
 };

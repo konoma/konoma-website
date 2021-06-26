@@ -1,11 +1,11 @@
 import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import React from 'react';
-import { LocaleAndValue } from '../../@types';
+import { LocaleAndValueType } from '../../@types';
 import { BaseComponentProps } from '../../helper/classNames';
 
 interface LanguageSwitcherProps extends BaseComponentProps {
-  currentPagePerLocale: LocaleAndValue[];
+  currentPagePerLocale: LocaleAndValueType[];
 }
 
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = (props) => {

@@ -50,117 +50,117 @@ module.exports = {
         sans: ['Spezia', 'sans-serif'],
         serif: ['Cambon', 'serif'],
       },
-      fontSize: {
-        xs: [
-          '14px',
-          {
-            lineHeight: '17px',
-          },
-        ],
-        sm: [
-          '16px',
-          {
-            lineHeight: '22px',
-          },
-        ],
-        'sm-desktop': [
-          '18px',
-          {
-            lineHeight: '24px',
-          },
-        ],
-        base: [
-          '17px',
-          {
-            lineHeight: '27px',
-            letterSpacing: '-0.01em',
-          },
-        ],
-        'base-desktop': [
-          '20px',
-          {
-            lineHeight: '30px',
-            letterSpacing: '-0.02em',
-          },
-        ],
-        lg: [
-          '19px',
-          {
-            lineHeight: '26px',
-          },
-        ],
-        'lg-desktop': [
-          '24px',
-          {
-            lineHeight: '32px',
-            letterSpacing: '-0.01em',
-          },
-        ],
-        xl: [
-          '19px',
-          {
-            lineHeight: '26px',
-          },
-        ],
-        'xl-desktop': [
-          '24px',
-          {
-            lineHeight: '32px',
-          },
-        ],
-        '2xl': [
-          '21px',
-          {
-            lineHeight: '28px',
-          },
-        ],
-        '2xl-desktop': [
-          '32px',
-          {
-            lineHeight: '40px',
-          },
-        ],
-        '3xl': [
-          '24px',
-          {
-            lineHeight: '32px',
-          },
-        ],
-        '3xl-desktop': [
-          '40px',
-          {
-            lineHeight: '50px',
-          },
-        ],
-        '4xl': [
-          '26px',
-          {
-            lineHeight: '34px',
-            letterSpacing: '-0.02em',
-          },
-        ],
-        '4xl-desktop': [
-          '48px',
-          {
-            lineHeight: '56px',
-            letterSpacing: '-0.02em',
-          },
-        ],
-        '5xl': [
-          '32px',
-          {
-            lineHeight: '40px',
-            letterSpacing: '-0.03em',
-          },
-        ],
-        '5xl-desktop': [
-          '64px',
-          {
-            lineHeight: '72px',
-            letterSpacing: '-0.01em',
-          },
-        ],
-      },
+      // fontSize: {
+      //   xs: [
+      //     '14px',
+      //     {
+      //       lineHeight: '17px',
+      //     },
+      //   ],
+      //   sm: [
+      //     '16px',
+      //     {
+      //       lineHeight: '22px',
+      //     },
+      //   ],
+      //   'sm-desktop': [
+      //     '18px',
+      //     {
+      //       lineHeight: '24px',
+      //     },
+      //   ],
+      //   base: [
+      //     '17px',
+      //     {
+      //       lineHeight: '27px',
+      //       letterSpacing: '-0.01em',
+      //     },
+      //   ],
+      //   'base-desktop': [
+      //     '20px',
+      //     {
+      //       lineHeight: '30px',
+      //       letterSpacing: '-0.02em',
+      //     },
+      //   ],
+      //   lg: [
+      //     '19px',
+      //     {
+      //       lineHeight: '26px',
+      //     },
+      //   ],
+      //   'lg-desktop': [
+      //     '24px',
+      //     {
+      //       lineHeight: '32px',
+      //       letterSpacing: '-0.01em',
+      //     },
+      //   ],
+      //   xl: [
+      //     '19px',
+      //     {
+      //       lineHeight: '26px',
+      //     },
+      //   ],
+      //   'xl-desktop': [
+      //     '24px',
+      //     {
+      //       lineHeight: '32px',
+      //     },
+      //   ],
+      //   '2xl': [
+      //     '21px',
+      //     {
+      //       lineHeight: '28px',
+      //     },
+      //   ],
+      //   '2xl-desktop': [
+      //     '32px',
+      //     {
+      //       lineHeight: '40px',
+      //     },
+      //   ],
+      //   '3xl': [
+      //     '24px',
+      //     {
+      //       lineHeight: '32px',
+      //     },
+      //   ],
+      //   '3xl-desktop': [
+      //     '40px',
+      //     {
+      //       lineHeight: '50px',
+      //     },
+      //   ],
+      //   '4xl': [
+      //     '26px',
+      //     {
+      //       lineHeight: '34px',
+      //       letterSpacing: '-0.02em',
+      //     },
+      //   ],
+      //   '4xl-desktop': [
+      //     '48px',
+      //     {
+      //       lineHeight: '56px',
+      //       letterSpacing: '-0.02em',
+      //     },
+      //   ],
+      //   '5xl': [
+      //     '32px',
+      //     {
+      //       lineHeight: '40px',
+      //       letterSpacing: '-0.03em',
+      //     },
+      //   ],
+      //   '5xl-desktop': [
+      //     '64px',
+      //     {
+      //       lineHeight: '72px',
+      //       letterSpacing: '-0.01em',
+      //     },
+      //   ],
+      // },
       spacing: {
         21: '5.25rem',
         30: '7.5rem',

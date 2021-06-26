@@ -3,10 +3,10 @@ import HomePage from '@components/Pages/HomePage';
 import { getHomePageAndSite } from '@lib/datocms/datocms-home';
 import { GetLocale, GetPreview } from '@lib/helpers';
 import { GetStaticProps } from 'next';
-import { DatoCMSResponse } from '../@types';
+import { DatoCMSResponseType, HomePageType } from '../@types';
 
 interface PageContent {
-  pageAndSite: DatoCMSResponse;
+  pageAndSite: DatoCMSResponseType<HomePageType>;
   activeLocale: string;
 }
 
