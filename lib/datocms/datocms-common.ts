@@ -23,6 +23,15 @@ export const FRAGMENT_COMPANY_INFORMATION = `
     }
   `;
 
+export const FRAGMENT_FOOTER_INFORMATION = `  
+    fragment footerInformationFragment on FooterInformationRecord {
+        contactLabel
+        contactPage {
+          slug
+        }
+    }
+  `;
+
 export const FRAGMENT_SLUG_LOCALES = `
   fragment slugLocalesFragment on StringMultiLocaleField {
     locale

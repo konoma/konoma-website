@@ -1,3 +1,4 @@
+import { ResponsiveImageType } from 'react-datocms/dist/types/Image';
 import { SeoMetaTagType } from 'react-datocms/dist/types/Seo';
 import { PassionIconCodeEnum } from './enum';
 
@@ -30,12 +31,17 @@ interface MainAnimationVideoType {
 interface CustomerStoryShortType {
   slug: string;
   title: string;
+  question: string;
+}
+
+interface ImageType {
+  responsiveImage: ResponsiveImageType;
 }
 
 interface CustomerStoryEntryType {
   id: string;
-  howMightWeQuestion: string;
   ctaLabel: string;
+  teaserImage: ImageType;
   customerStory: CustomerStoryShortType;
 }
 
@@ -60,5 +66,21 @@ interface SiteType {
 
 interface DatoCMSResponseType<T> {
   page: T;
+  companyInformation: CompanyInformationType;
+  footerInformation: FooterInformationType;
   site: SiteType;
+}
+
+interface FooterInformationType {
+  contactLabel: string;
+  contactPage: LinkType;
+}
+
+interface CompanyInformationType {
+  address: string;
+  companyEmail: string;
+}
+
+interface LinkType {
+  slug: string;
 }

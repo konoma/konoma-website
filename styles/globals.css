@@ -36,10 +36,7 @@
 /* Global Link Styling */
 @layer base {
   a {
-    @apply text-blue-700 transition-colors;
-    @apply focus:outline-none focus:text-indigo-500;
-    @apply hover:text-indigo-700;
-    @apply active:text-indigo-900;
+    @apply text-blue-700;
   }
 
   html,

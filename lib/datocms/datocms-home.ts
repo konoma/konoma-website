@@ -1,4 +1,11 @@
-import { fetchAPI, FRAGMENT_COMPANY_INFORMATION, FRAGMENT_SLUG_LOCALES, FRAGMENT_TAG } from '@lib/datocms/datocms-common';
+import {
+  fetchAPI,
+  FRAGMENT_COMPANY_INFORMATION,
+  FRAGMENT_FOOTER_INFORMATION,
+  FRAGMENT_RESPONSIVE_IMAGE,
+  FRAGMENT_SLUG_LOCALES,
+  FRAGMENT_TAG,
+} from '@lib/datocms/datocms-common';
 import { DatoCMSResponseType, HomePageType } from '../../@types';
 
 export const getHomePageAndSite = async (locale: string, preview: boolean): Promise<DatoCMSResponseType<HomePageType>> => {
@@ -23,12 +30,18 @@ export const getHomePageAndSite = async (locale: string, preview: boolean): Prom
         }
         
         customerStories {
-        id
+          id
           ctaLabel
-          howMightWeQuestion
+          teaserImage {
+            responsiveImage(imgixParams: { w: 1200 }) {
+              ...responsiveImageFragment
+            }
+          }
+          
           customerStory {
             slug
             title
+            question
           }
         }
         
@@ -45,13 +58,19 @@ export const getHomePageAndSite = async (locale: string, preview: boolean): Prom
         ...companyInformationFragment
       } 
       
+      footerInformation: footerInformation(locale: $locale) {
+        ...footerInformationFragment
+      }
+      
       site: _site(locale: $locale) {
         faviconMetaTags {
           ...tagFragment
         }
       }
     }
+    ${FRAGMENT_RESPONSIVE_IMAGE}
     ${FRAGMENT_COMPANY_INFORMATION}
+    ${FRAGMENT_FOOTER_INFORMATION}
     ${FRAGMENT_SLUG_LOCALES}
     ${FRAGMENT_TAG}
   `,

@@ -15,6 +15,8 @@ const BasePage: React.FC<BasePageProps> = (props) => {
   const seoMetaTags = pageAndSite.page.seoMetaTags || [];
   const faviconMetaTags = pageAndSite.site.faviconMetaTags || [];
   const pagePerLocales = pageAndSite.page.allSlugLocales;
+  const companyInformation = pageAndSite.companyInformation;
+  const footerInformation = pageAndSite.footerInformation;
 
   return (
     <>
@@ -25,7 +27,7 @@ const BasePage: React.FC<BasePageProps> = (props) => {
       <div>
         {children}
 
-        <SiteFooter />
+        <SiteFooter companyInformation={companyInformation} footerInformation={footerInformation} />
       </div>
     </>
   );

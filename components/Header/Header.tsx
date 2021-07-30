@@ -1,4 +1,4 @@
-import KonomaLogo from '@components/KonomaLogo';
+import KonomaLogo from '@components/Logo/KonomaLogo';
 import LanguageSwitcher from '@components/Navigation/LanguageSwitcher';
 import NavLink from '@components/Navigation/NavLink';
 import NavMobileButton from '@components/Navigation/NavMobileButton';

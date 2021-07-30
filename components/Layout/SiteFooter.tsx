@@ -1,45 +1,27 @@
-import React from 'react';
+import KonomaLogo from '@components/Logo/KonomaLogo';
+import MailLink from '@components/Navigation/MailLink';
+import PageLink from '@components/Navigation/PageLink';
 import { BaseComponentProps } from 'helper/classNames';
-import KonomaLogoInverted from '@components/KonomaLogoInverted';
-import LinkIcon from '@components/Navigation/LinkIcon';
-import { IconMail, IconArrow } from '@components/icons';
+import React from 'react';
+import { CompanyInformationType, FooterInformationType } from '../../@types';
 
-interface SiteFooterProps extends BaseComponentProps {}
+interface SiteFooterProps extends BaseComponentProps {
+  companyInformation: CompanyInformationType;
+  footerInformation: FooterInformationType;
+}
 
 const SiteFooter: React.FC<SiteFooterProps> = (props) => {
-  const { className } = props;
+  const { companyInformation, footerInformation, className } = props;
 
   return (
-    //  todo: Defining props and assigning them
-    <footer
-      className={`flex flex-col gap-4 \
-                mt-6 lg:mt-10 2xl:mt-15 p-5 md:p-8 \
-                bg-white border-t border-indigo-200 \
-                ${className ?? ''}`}
-    >
-      <KonomaLogoInverted />
-      <div className={`font-sans font-medium text-sm text-center`}>
-        Konoma GmbH, <br className="md:hidden" />
-        Rütistrasse 6, <br className="md:hidden" />
-        5400 Baden, Schweiz
-      </div>
-      <div className={`flex flex-nowrap flex-col md:flex-row justify-center items-center`}>
-        <LinkIcon
-          text="info@konoma.ch"
-          to="mailto:info@konoma.ch"
-          type="internal"
-          color="blue"
-          className={`flex-initial p-0.5 md:p-2`}
-          iconLeft={<IconMail className={`flex-initial w-3 h-3 mr-1`} />}
-        />
-        <LinkIcon
-          text="Kontakt"
-          to="/kontakt"
-          type="internal"
-          color="blue"
-          className={`flex-initial p-0.5 md:p-2`}
-          iconLeft={<IconArrow className={`flex-initial w-3 h-3 mr-1`} />}
-        />
+    <footer className="max-w-3xl mx-auto p-16 text-center">
+      <KonomaLogo textColor="indigo-700" backgroundColor="white" width="24" className="mb-6" />
+
+      <address className="font-sans not-italic font-medium text-md mb-8">{companyInformation.address}</address>
+
+      <div className="flex justify-center gap-12">
+        <MailLink emailAddress={companyInformation.companyEmail} label={companyInformation.companyEmail} />
+        <PageLink href={footerInformation.contactPage.slug} label={footerInformation.contactLabel} />
       </div>
     </footer>
   );

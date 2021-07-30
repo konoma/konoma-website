@@ -41,7 +41,7 @@ const Passions: React.FC<PassionProps> = (props) => {
         }
 
         return (
-          <li key={passion.id} className="flex flex-row items-center mb-4 last:mb-0">
+          <li key={passion.id} className="flex flex-row items-center mb-4 last:mb-0 text-xl font-medium">
             {PassionIcon !== null && <PassionIcon className="w-14 h-14 mr-4" />}
             <span>{passion.description}</span>
           </li>
