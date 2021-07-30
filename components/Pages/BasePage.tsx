@@ -1,4 +1,4 @@
-import SiteFooter from '@components/Layout/SiteFooter';
+import Footer from '@components/Footer/Footer';
 import MetaTags from '@components/MetaTags';
 import Header from '@components/Header/Header';
 import React from 'react';
@@ -27,7 +27,7 @@ const BasePage: React.FC<BasePageProps> = (props) => {
       <div>
         {children}
 
-        <SiteFooter companyInformation={companyInformation} footerInformation={footerInformation} />
+        <Footer companyInformation={companyInformation} footerInformation={footerInformation} />
       </div>
     </>
   );

@@ -47,6 +47,30 @@ export const FRAGMENT_TAG = `
   }
 `;
 
+export const FRAGMENT_CTA = `
+  fragment ctaFragment on CtaRecord {
+    title
+    description
+    target {
+      ... on ContactPageRecord {
+        slug
+      }
+      ... on HomePageRecord {
+        slug
+      }
+      ... on TeamPageRecord {
+        slug
+      }
+      ... on ProjectsPageRecord {
+        slug
+      }
+      ... on CustomerStoryPageRecord {
+        slug
+      }
+    }
+  }
+`;
+
 export const fetchAPI = async <T>(query: string, variables: any, preview: boolean): Promise<T> => {
   const authorization = 'Bearer ' + process.env.DATO_CMS_API_TOKEN;
 

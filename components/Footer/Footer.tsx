@@ -5,12 +5,12 @@ import { BaseComponentProps } from 'helper/classNames';
 import React from 'react';
 import { CompanyInformationType, FooterInformationType } from '../../@types';
 
-interface SiteFooterProps extends BaseComponentProps {
+interface FooterProps extends BaseComponentProps {
   companyInformation: CompanyInformationType;
   footerInformation: FooterInformationType;
 }
 
-const SiteFooter: React.FC<SiteFooterProps> = (props) => {
+const Footer: React.FC<FooterProps> = (props) => {
   const { companyInformation, footerInformation, className } = props;
 
   return (
@@ -27,4 +27,4 @@ const SiteFooter: React.FC<SiteFooterProps> = (props) => {
   );
 };
 
-export default SiteFooter;
+export default Footer;

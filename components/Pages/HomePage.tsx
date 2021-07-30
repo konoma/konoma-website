@@ -49,7 +49,7 @@ const HomePage: React.FC<HomePageProps> = (props) => {
                 <PageLink href={story.customerStory.slug} label={story.ctaLabel} />
               </div>
 
-              <div className="">
+              <div>
                 <Image data={story.teaserImage.responsiveImage} />
               </div>
             </div>
@@ -59,11 +59,9 @@ const HomePage: React.FC<HomePageProps> = (props) => {
 
       <div className="bg-indigo-900 py-32 px-56">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-serif text-4xl text-white mb-16">Lassen Sie uns die Zukunft angehen</h2>
-          <p className="text-2xl text-white mb-10 font-medium">
-            Das Merkwürdige an der Zukunft ist wohl die Vorstellung, dass man unsere Zeit einmal die gute alte Zeit nennen wird.
-          </p>
-          <PageLink href="/contact" label="Kontaktieren Sie uns" color="white" />
+          <h2 className="font-serif text-4xl text-white mb-16">{page.cta.title}</h2>
+          <p className="text-2xl text-white mb-10 font-medium">{page.cta.description}</p>
+          <PageLink href={page.cta.target.slug} label={page.cta.target.slug} color="white" />
         </div>
       </div>
     </div>

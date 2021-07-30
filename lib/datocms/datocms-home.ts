@@ -1,6 +1,7 @@
 import {
   fetchAPI,
   FRAGMENT_COMPANY_INFORMATION,
+  FRAGMENT_CTA,
   FRAGMENT_FOOTER_INFORMATION,
   FRAGMENT_RESPONSIVE_IMAGE,
   FRAGMENT_SLUG_LOCALES,
@@ -45,6 +46,10 @@ export const getHomePageAndSite = async (locale: string, preview: boolean): Prom
           }
         }
         
+        cta {
+          ..ctaFragment
+        }
+        
         seoMetaTags: _seoMetaTags {
           ...tagFragment
         }
@@ -73,6 +78,7 @@ export const getHomePageAndSite = async (locale: string, preview: boolean): Prom
     ${FRAGMENT_FOOTER_INFORMATION}
     ${FRAGMENT_SLUG_LOCALES}
     ${FRAGMENT_TAG}
+    ${FRAGMENT_CTA}
   `,
     {
       locale: locale,

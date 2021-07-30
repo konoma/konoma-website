@@ -53,6 +53,7 @@ interface HomePageType extends PageType {
   passionTitle: string;
   passions: PassionType[];
   customerStories: CustomerStoryEntryType[];
+  cta: CtaType;
 }
 
 interface PageType {
@@ -74,6 +75,12 @@ interface DatoCMSResponseType<T> {
 interface FooterInformationType {
   contactLabel: string;
   contactPage: LinkType;
+}
+
+interface CtaType {
+  title: string;
+  description: string;
+  target: LinkType;
 }
 
 interface CompanyInformationType {
