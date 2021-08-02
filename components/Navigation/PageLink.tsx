@@ -13,11 +13,15 @@ const PageLink: React.FC<PageLinkProps> = (props) => {
   const { href, label, color = 'blue-700' } = props;
 
   return (
-    <div className="flex items-center">
+    <div>
       <Link href={href}>
-        <a className={`text-${color} font-medium text-xl`}>{label}</a>
+        <a className={`text-${color} font-medium text-xl`}>
+          <span className="flex items-center">
+            <span>{label}</span>
+            <IconArrow className={`ml-2 w-6 text-${color} `} />
+          </span>
+        </a>
       </Link>
-      <IconArrow className={`ml-2 w-6 text-${color} `} />
     </div>
   );
 };

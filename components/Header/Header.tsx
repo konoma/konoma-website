@@ -1,7 +1,10 @@
 import KonomaLogo from '@components/Logo/KonomaLogo';
 import LanguageSwitcher from '@components/Navigation/LanguageSwitcher';
-import NavLink from '@components/Navigation/NavLink';
+import NavigationButton from '@components/Navigation/NavigationButton';
+import NavigationLink from '@components/Navigation/NavigationLink';
 import NavMobileButton from '@components/Navigation/NavMobileButton';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LocaleAndValueType } from '../../@types';
@@ -14,11 +17,16 @@ const Header: React.FC<HeaderProps> = (props) => {
   const { currentPagePerLocale } = props;
   const { t } = useTranslation();
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const router = useRouter();
 
   return (
     <>
       <header className="max-w-7xl mx-auto flex flex-row justify-between">
-        <KonomaLogo />
+        <Link href="/">
+          <a>
+            <KonomaLogo />
+          </a>
+        </Link>
 
         <NavMobileButton className="mr-8 md:hidden" toggled={showMenu} onClick={() => setShowMenu(!showMenu)} />
 
@@ -34,10 +42,11 @@ const Header: React.FC<HeaderProps> = (props) => {
             ${showMenu ? 'flex' : 'hidden'}
             `}
         >
-          <NavLink key="overview" to={'/'} title={t('Overview')} />
-          <NavLink key="projects" to={'/'} title={t('Projects')} />
-          <NavLink key="team" to={'/'} title={t('Team')} />
-          <NavLink key="contact" to={'/'} title={t('Contact')} />
+          <NavigationLink key="overview" title={t('Overview')} url="/" />
+          <NavigationLink key="projects" title={t('Projects')} url="/projects" />
+          <NavigationLink key="team" title={t('Team')} url="/team" />
+
+          <NavigationButton key="contact" title={t('Contact')} url="/contact" />
 
           <LanguageSwitcher currentPagePerLocale={currentPagePerLocale} />
         </nav>
