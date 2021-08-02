@@ -56,6 +56,14 @@ interface HomePageType extends PageType {
   cta: CtaType[];
 }
 
+interface ProjectsPageType extends PageType {
+  title: string;
+  lead: string;
+  customerStories: CustomerStoryEntryType[];
+  otherClientsTitle: string;
+  clientLogos: ResponsiveImageType[];
+}
+
 interface PageType {
   seoMetaTags: SeoMetaTagType[];
   allSlugLocales: LocaleAndValueType[];

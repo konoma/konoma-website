@@ -24,7 +24,7 @@ const BasePage: React.FC<BasePageProps> = (props) => {
 
       <Header currentPagePerLocale={pagePerLocales} />
 
-      <div>
+      <div className="mt-16 lg:mt-28">
         {children}
 
         <Footer companyInformation={companyInformation} footerInformation={footerInformation} />

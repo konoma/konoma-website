@@ -18,7 +18,7 @@ const HomePage: React.FC<HomePageProps> = (props) => {
 
   return (
     <div>
-      <ContentRow className="mt-16 lg:mt-28 mb-8 md:mb-16">
+      <ContentRow className="mb-8 md:mb-16">
         <div className="max-w-3xl">
           <Slogan>{page.slogan}</Slogan>
         </div>

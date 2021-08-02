@@ -51,7 +51,9 @@ module.exports = {
         serif: ['Cambon', 'serif'],
       },
       spacing: {
+        17: '4.25rem',
         21: '5.25rem',
+        25: '6.25rem',
         30: '7.5rem',
         35: '8.75rem',
         50: '12.5rem',
