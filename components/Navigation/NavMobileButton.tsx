@@ -19,13 +19,13 @@ const NavMobileButton: React.FC<NavMobileButtonProps> = (props) => {
       <button
         {...buttonProps}
         className={`
-                flex flex-row justify-center align-middle
+                flex items-center
                 font-sans font-medium
                 hover:text-indigo-500 focus:outline-none focus:text-indigo-500 active:text-indigo-900 transition-colors
                 ${toggled ? 'text-indigo-700' : 'text-gray-900'}
                 ${className ?? ''}`}
       >
-        <span className="leading-none mr-1.5">{labelText}</span> {Icon}
+        <span className="leading-none mr-3">{labelText}</span> <span className="w-6 h-6">{Icon}</span>
       </button>
     </div>
   );

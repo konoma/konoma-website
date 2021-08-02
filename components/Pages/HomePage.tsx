@@ -17,14 +17,14 @@ const HomePage: React.FC<HomePageProps> = (props) => {
   const cta = page.cta[0];
 
   return (
-    <div className="mt-28">
-      <ContentRow className="mb-16">
+    <div>
+      <ContentRow className="mt-16 lg:mt-28 mb-8 md:mb-16">
         <div className="max-w-3xl">
           <Slogan>{page.slogan}</Slogan>
         </div>
       </ContentRow>
 
-      <ContentRow className="flex flex-row">
+      <ContentRow className="flex flex-col-reverse md:flex-row">
         <div className="flex-1 mr-3">
           <Lead>{page.lead}</Lead>
         </div>
@@ -35,7 +35,7 @@ const HomePage: React.FC<HomePageProps> = (props) => {
         </div>
       </ContentRow>
 
-      <Passions title={page.passionTitle} passions={page.passions} className="mb-16 -mt-48" />
+      <Passions title={page.passionTitle} passions={page.passions} className="mb-16 mt-8 lg:-mt-48" />
 
       <CustomerStoryLinks stories={page.customerStories} />
 

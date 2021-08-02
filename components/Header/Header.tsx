@@ -4,7 +4,6 @@ import NavigationButton from '@components/Navigation/NavigationButton';
 import NavigationLink from '@components/Navigation/NavigationLink';
 import NavMobileButton from '@components/Navigation/NavMobileButton';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LocaleAndValueType } from '../../@types';
@@ -17,16 +16,17 @@ const Header: React.FC<HeaderProps> = (props) => {
   const { currentPagePerLocale } = props;
   const { t } = useTranslation();
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  const router = useRouter();
 
   return (
     <>
-      <header className="max-w-7xl mx-auto flex flex-row justify-between">
-        <Link href="/">
-          <a>
-            <KonomaLogo />
-          </a>
-        </Link>
+      <header className="max-w-7xl mx-auto flex justify-between">
+        <div>
+          <Link href="/">
+            <a>
+              <KonomaLogo />
+            </a>
+          </Link>
+        </div>
 
         <NavMobileButton className="mr-8 md:hidden" toggled={showMenu} onClick={() => setShowMenu(!showMenu)} />
 
