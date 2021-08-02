@@ -18,7 +18,7 @@ const PageLink: React.FC<PageLinkProps> = (props) => {
         <a className={`text-${color} font-medium text-xl`}>
           <span className="flex items-center">
             <span>{label}</span>
-            <IconArrow className={`ml-2 w-6 text-${color} `} />
+            <IconArrow className={`ml-2 w-6 text-${color}`} />
           </span>
         </a>
       </Link>

@@ -13,7 +13,7 @@ const MailLink: React.FC<MailLinkProps> = (props) => {
 
   return (
     <div className="flex items-center">
-      <IconMail className={`mr-2 w-6 text-${color} `} />
+      <IconMail className={`mr-2 w-6 text-blue-700 ${color}`} />
       <a href={`mailto:${emailAddress}`} className={`text-${color} font-medium text-xl`}>
         {label}
       </a>
