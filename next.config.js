@@ -6,4 +6,7 @@ module.exports = {
   future: {
     webpack5: true,
   },
+  images: {
+    domains: ['www.datocms-assets.com'],
+  },
 };

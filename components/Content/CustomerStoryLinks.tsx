@@ -1,4 +1,4 @@
-import CustomerStoryLink from '@components/Content/CustomerStoryLink';
+import CustomerStoryLink, { AlignmentEnum } from '@components/Content/CustomerStoryLink';
 import ContentRow from '@components/Layout/ContentRow';
 import React from 'react';
 import { CustomerStoryEntryType } from '../../@types';
@@ -12,8 +12,10 @@ const CustomerStoryLinks: React.FunctionComponent<CustomerStoryLinksProps> = (pr
 
   return (
     <ContentRow>
-      {stories.map((story) => {
-        return <CustomerStoryLink key={story.id} story={story} />;
+      {stories.map((story, index) => {
+        return (
+          <CustomerStoryLink key={story.id} story={story} imageAlignment={index % 2 === 0 ? AlignmentEnum.RIGHT : AlignmentEnum.LEFT} />
+        );
       })}
     </ContentRow>
   );
