@@ -1,22 +1,18 @@
 import React from 'react';
 import { BaseComponentProps } from '../../helper/classNames';
 
-interface KonomaLogoProps extends BaseComponentProps {
-  backgroundColor?: string;
-  textColor?: string;
-  width?: string;
-}
+interface KonomaLogoProps extends BaseComponentProps {}
 
 const KonomaLogo: React.FC<KonomaLogoProps> = (props) => {
-  const { backgroundColor = 'indigo-700', textColor = 'white', width = '50', className = '' } = props;
+  const { className = '' } = props;
 
   return (
     <div
       className={`
           px-10 py-7
-          bg-${backgroundColor}
-          text-${textColor}
-          w-${width}
+          bg-indigo-700
+          text-white
+          w-50
           ${className}`}
     >
       <svg viewBox="0 0 124 22" className="fill-current" xmlns="http://www.w3.org/2000/svg">
