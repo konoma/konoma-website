@@ -1,11 +1,11 @@
+import CTA from '@components/Content/CTA';
+import CustomerStoryLink from '@components/Content/CustomerStoryLink';
 import Passions from '@components/Content/Passions';
 import Video from '@components/Media/Video';
-import PageLink from '@components/Navigation/PageLink';
 import Lead from '@components/Text/Lead';
 import Slogan from '@components/Text/Slogan';
 import SubTitle from '@components/Text/SubTitle';
 import React from 'react';
-import { Image } from 'react-datocms';
 import { HomePageType } from '../../@types';
 
 interface HomePageProps {
@@ -14,6 +14,7 @@ interface HomePageProps {
 
 const HomePage: React.FC<HomePageProps> = (props) => {
   const { page } = props;
+  const cta = page.cta[0];
 
   return (
     <div className="mt-28">
@@ -41,29 +42,11 @@ const HomePage: React.FC<HomePageProps> = (props) => {
 
       <div className="max-w-7xl mx-auto">
         {page.customerStories.map((story) => {
-          return (
-            <div key={story.id} className="flex gap-48 mt-20 mb-20 items-center">
-              <div>
-                <h3 className="text-indigo-700 font-serif text-2xl mb-10">{story.customerStory.title}</h3>
-                <p className="font-medium mb-10 text-xl">{story.customerStory.question}</p>
-                <PageLink href={story.customerStory.slug} label={story.ctaLabel} />
-              </div>
-
-              <div>
-                <Image data={story.teaserImage.responsiveImage} />
-              </div>
-            </div>
-          );
+          return <CustomerStoryLink key={story.id} story={story} />;
         })}
       </div>
 
-      <div className="bg-indigo-900 py-32 px-56">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="font-serif text-4xl text-white mb-16">{page.cta.title}</h2>
-          <p className="text-2xl text-white mb-10 font-medium">{page.cta.description}</p>
-          <PageLink href={page.cta.target.slug} label={page.cta.target.slug} color="white" />
-        </div>
-      </div>
+      <CTA cta={cta} />
     </div>
   );
 };

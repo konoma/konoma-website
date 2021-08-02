@@ -51,6 +51,7 @@ export const FRAGMENT_CTA = `
   fragment ctaFragment on CtaRecord {
     title
     description
+    targetLabel
     target {
       ... on ContactPageRecord {
         slug

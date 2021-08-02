@@ -10,8 +10,7 @@ import {
 import { DatoCMSResponseType, HomePageType } from '../../@types';
 
 export const getHomePageAndSite = async (locale: string, preview: boolean): Promise<DatoCMSResponseType<HomePageType>> => {
-  return fetchAPI<DatoCMSResponseType<HomePageType>>(
-    `
+  const query = `
     query HomePageAndSite($locale: SiteLocale) {
       page: homePage(locale: $locale) {
         slogan
@@ -47,7 +46,7 @@ export const getHomePageAndSite = async (locale: string, preview: boolean): Prom
         }
         
         cta {
-          ..ctaFragment
+          ...ctaFragment
         }
         
         seoMetaTags: _seoMetaTags {
@@ -79,7 +78,10 @@ export const getHomePageAndSite = async (locale: string, preview: boolean): Prom
     ${FRAGMENT_SLUG_LOCALES}
     ${FRAGMENT_TAG}
     ${FRAGMENT_CTA}
-  `,
+  `;
+
+  return fetchAPI<DatoCMSResponseType<HomePageType>>(
+    query,
     {
       locale: locale,
     },

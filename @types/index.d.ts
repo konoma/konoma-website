@@ -53,7 +53,7 @@ interface HomePageType extends PageType {
   passionTitle: string;
   passions: PassionType[];
   customerStories: CustomerStoryEntryType[];
-  cta: CtaType;
+  cta: CtaType[];
 }
 
 interface PageType {
@@ -80,6 +80,7 @@ interface FooterInformationType {
 interface CtaType {
   title: string;
   description: string;
+  targetLabel: string;
   target: LinkType;
 }
 
