@@ -5,49 +5,56 @@ import {
   IconServiceUserExperience,
   IconServiceUserInterface,
 } from '@components/icons';
+import ContentRow from '@components/Layout/ContentRow';
+import SubTitle from '@components/Text/SubTitle';
 import React from 'react';
 import { PassionType } from '../../@types';
 import { PassionIconCodeEnum } from '../../@types/enum';
 import { BaseComponentProps } from '../../helper/classNames';
 
 interface PassionProps extends BaseComponentProps {
+  title: string;
   passions: PassionType[];
 }
 
 const Passions: React.FC<PassionProps> = (props) => {
-  const { passions, className } = props;
+  const { title, passions, className = '' } = props;
 
   return (
-    <ul className={className}>
-      {passions.map((passion) => {
-        let PassionIcon = null;
+    <ContentRow className={className}>
+      <SubTitle>{title}</SubTitle>
 
-        switch (passion.iconCode) {
-          case PassionIconCodeEnum.StrategicConsulting:
-            PassionIcon = IconServiceStrategicConsulting;
-            break;
-          case PassionIconCodeEnum.UserExperience:
-            PassionIcon = IconServiceUserExperience;
-            break;
-          case PassionIconCodeEnum.UserInterface:
-            PassionIcon = IconServiceUserInterface;
-            break;
-          case PassionIconCodeEnum.Development:
-            PassionIcon = IconServiceDevelopment;
-            break;
-          case PassionIconCodeEnum.CustomerInteraction:
-            PassionIcon = IconServiceCustomerInteraction;
-            break;
-        }
+      <ul>
+        {passions.map((passion) => {
+          let PassionIcon = null;
 
-        return (
-          <li key={passion.id} className="flex flex-row items-center mb-4 last:mb-0 text-xl font-medium">
-            {PassionIcon !== null && <PassionIcon className="w-14 h-14 mr-4" />}
-            <span>{passion.description}</span>
-          </li>
-        );
-      })}
-    </ul>
+          switch (passion.iconCode) {
+            case PassionIconCodeEnum.StrategicConsulting:
+              PassionIcon = IconServiceStrategicConsulting;
+              break;
+            case PassionIconCodeEnum.UserExperience:
+              PassionIcon = IconServiceUserExperience;
+              break;
+            case PassionIconCodeEnum.UserInterface:
+              PassionIcon = IconServiceUserInterface;
+              break;
+            case PassionIconCodeEnum.Development:
+              PassionIcon = IconServiceDevelopment;
+              break;
+            case PassionIconCodeEnum.CustomerInteraction:
+              PassionIcon = IconServiceCustomerInteraction;
+              break;
+          }
+
+          return (
+            <li key={passion.id} className="flex flex-row items-center mb-4 last:mb-0 text-xl font-medium">
+              {PassionIcon !== null && <PassionIcon className="w-14 h-14 mr-4" />}
+              <span>{passion.description}</span>
+            </li>
+          );
+        })}
+      </ul>
+    </ContentRow>
   );
 };
 
