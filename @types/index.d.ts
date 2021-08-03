@@ -65,6 +65,7 @@ interface ProjectShortType {
 interface ProjectDetailsType extends ProjectShortType {
   customer: CustomerDetailsType;
   heroImage: ImageType;
+  content: ModelApiKeyType[];
 }
 
 interface HomePageType extends PageType {
@@ -123,4 +124,29 @@ interface CompanyInformationType {
 
 interface LinkType {
   slug: string;
+}
+
+interface ProjectLinkType extends LinkType {
+  referenceLabel: string;
+}
+
+interface ModelApiKeyType {
+  id: string;
+  _modelApiKey: string;
+}
+
+interface SubTitleRecordType extends ModelApiKeyType {
+  subtitle: string;
+}
+
+interface TextRecordType extends ModelApiKeyType {
+  text: string;
+}
+
+interface TextAndImageBlockRecordType extends ModelApiKeyType {
+  title: string;
+  description: string;
+  image: ImageType;
+  imageAlignment: string;
+  projectLink: ProjectLinkType;
 }

@@ -32,7 +32,6 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 items-center">
             {page.clientLogos.map((clientLogo, index) => {
-              console.log(JSON.stringify(clientLogo));
               return (
                 <div key={index} className="w-25">
                   <DatoCMSImage image={clientLogo} />

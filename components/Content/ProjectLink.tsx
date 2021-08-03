@@ -2,11 +2,7 @@ import DatoCMSImage from '@components/Media/DatoCMSImage';
 import PageLink from '@components/Navigation/PageLink';
 import React from 'react';
 import { ProjectShortType } from '../../@types';
-
-export enum AlignmentEnum {
-  LEFT = 'LEFT',
-  RIGHT = 'RIGHT',
-}
+import { AlignmentEnum } from '../../@types/enum';
 
 interface ProjectLinkProps {
   project: ProjectShortType;

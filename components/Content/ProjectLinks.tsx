@@ -1,7 +1,8 @@
-import ProjectLink, { AlignmentEnum } from '@components/Content/ProjectLink';
+import ProjectLink from '@components/Content/ProjectLink';
 import ContentRow from '@components/Layout/ContentRow';
 import React from 'react';
 import { ProjectShortType } from '../../@types';
+import { AlignmentEnum } from '../../@types/enum';
 
 interface ProjectLinksProps {
   projects: ProjectShortType[];

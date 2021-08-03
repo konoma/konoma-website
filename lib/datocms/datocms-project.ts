@@ -1,14 +1,12 @@
 import {
   fetchAPI,
-  fetchAPINoParams,
   FRAGMENT_COMPANY_INFORMATION,
-  FRAGMENT_CTA,
   FRAGMENT_FOOTER_INFORMATION,
   FRAGMENT_RESPONSIVE_IMAGE,
   FRAGMENT_SLUG_LOCALES,
   FRAGMENT_TAG,
 } from '@lib/datocms/datocms-common';
-import { AllProjectSlugsType, DatoCMSResponseType, HomePageType, ProjectDetailsType, ProjectsPageType, SlugRouteType } from '../../@types';
+import { AllProjectSlugsType, DatoCMSResponseType, ProjectDetailsType } from '../../@types';
 
 export const getAllProjectSlugs = async (locale: string): Promise<AllProjectSlugsType> => {
   const query = `
@@ -19,7 +17,21 @@ export const getAllProjectSlugs = async (locale: string): Promise<AllProjectSlug
     }
   `;
 
-  return fetchAPINoParams<AllProjectSlugsType>(query);
+  // TODO: Fix query and processing!
+  /*
+
+    allProjects {
+    _allSlugLocales {
+      locale
+      value
+    }
+  }
+
+   */
+
+  return fetchAPI<AllProjectSlugsType>(query, {
+    locale: locale,
+  });
 };
 
 export const getProjectPageAndSite = async (
@@ -61,9 +73,16 @@ export const getProjectPageAndSite = async (
             id
             title
             description
+            image {
+              responsiveImage {
+                ...responsiveImageFragment
+              }
+            }
             imageAlignment
+                        
             projectLink {
               slug
+              referenceLabel
             }
           }
         }

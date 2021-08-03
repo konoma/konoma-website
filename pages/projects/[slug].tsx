@@ -34,8 +34,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const pageAndSite = await getProjectPageAndSite(slug, activeLocale, isPreview);
 
-  console.log(JSON.stringify(pageAndSite));
-
   return {
     props: { pageAndSite, activeLocale },
   };

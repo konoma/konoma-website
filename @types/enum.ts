@@ -5,3 +5,8 @@ export enum PassionIconCodeEnum {
   Development = 'Development',
   CustomerInteraction = 'CustomerInteraction',
 }
+
+export enum AlignmentEnum {
+  LEFT = 'LEFT',
+  RIGHT = 'RIGHT',
+}
