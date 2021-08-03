@@ -47,6 +47,23 @@ export const FRAGMENT_TAG = `
   }
 `;
 
+export const FRAGMENT_PROJECT_SHORT = `
+  fragment projectShortFragment on ProjectRecord {
+    slug
+    title
+    question
+    customer {
+      name
+    }
+    referenceLabel
+    referenceImage {
+      responsiveImage {
+        ...responsiveImageFragment
+      }
+    }
+  }
+`;
+
 export const FRAGMENT_CTA = `
   fragment ctaFragment on CtaRecord {
     title
@@ -65,7 +82,7 @@ export const FRAGMENT_CTA = `
       ... on ProjectsPageRecord {
         slug
       }
-      ... on CustomerStoryPageRecord {
+      ... on ProjectRecord {
         slug
       }
     }

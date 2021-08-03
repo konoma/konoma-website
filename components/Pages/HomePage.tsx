@@ -1,6 +1,6 @@
 import CTA from '@components/Content/CTA';
-import CustomerStoryLinks from '@components/Content/CustomerStoryLinks';
 import Passions from '@components/Content/Passions';
+import ProjectLinks from '@components/Content/ProjectLinks';
 import ContentRow from '@components/Layout/ContentRow';
 import Video from '@components/Media/Video';
 import Lead from '@components/Text/Lead';
@@ -37,7 +37,7 @@ const HomePage: React.FC<HomePageProps> = (props) => {
 
       <Passions title={page.passionTitle} passions={page.passions} className="mb-16 mt-8 lg:-mt-48" />
 
-      <CustomerStoryLinks stories={page.customerStories} />
+      <ProjectLinks projects={page.projects} />
 
       <CTA cta={cta} />
     </div>

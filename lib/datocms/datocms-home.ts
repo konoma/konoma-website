@@ -3,6 +3,7 @@ import {
   FRAGMENT_COMPANY_INFORMATION,
   FRAGMENT_CTA,
   FRAGMENT_FOOTER_INFORMATION,
+  FRAGMENT_PROJECT_SHORT,
   FRAGMENT_RESPONSIVE_IMAGE,
   FRAGMENT_SLUG_LOCALES,
   FRAGMENT_TAG,
@@ -29,20 +30,8 @@ export const getHomePageAndSite = async (locale: string, preview: boolean): Prom
           description
         }
         
-        customerStories {
-          id
-          ctaLabel
-          teaserImage {
-            responsiveImage(imgixParams: { w: 1200 }) {
-              ...responsiveImageFragment
-            }
-          }
-          
-          customerStory {
-            slug
-            title
-            question
-          }
+        projects {
+          ...projectShortFragment
         }
         
         cta {
@@ -78,6 +67,7 @@ export const getHomePageAndSite = async (locale: string, preview: boolean): Prom
     ${FRAGMENT_SLUG_LOCALES}
     ${FRAGMENT_TAG}
     ${FRAGMENT_CTA}
+    ${FRAGMENT_PROJECT_SHORT}
   `;
 
   return fetchAPI<DatoCMSResponseType<HomePageType>>(

@@ -19,6 +19,8 @@ interface PassionType {
   description: string;
 }
 
+// === Media Types ===
+
 interface VideoType {
   streamingUrl: string;
   mp4Url: string;
@@ -28,21 +30,23 @@ interface MainAnimationVideoType {
   video: VideoType;
 }
 
-interface CustomerStoryShortType {
-  slug: string;
-  title: string;
-  question: string;
-}
-
 interface ImageType {
   responsiveImage: ResponsiveImageType;
 }
 
-interface CustomerStoryEntryType {
-  id: string;
-  ctaLabel: string;
-  teaserImage: ImageType;
-  customerStory: CustomerStoryShortType;
+// === Media Types ===
+
+interface CustomerShortType {
+  name: string;
+}
+
+interface ProjectShortType {
+  slug: string;
+  title: string;
+  question: string;
+  customer: CustomerShortType;
+  referenceLabel: string;
+  referenceImage: ImageType;
 }
 
 interface HomePageType extends PageType {
@@ -52,16 +56,20 @@ interface HomePageType extends PageType {
   mainAnimationVideo: MainAnimationVideoType;
   passionTitle: string;
   passions: PassionType[];
-  customerStories: CustomerStoryEntryType[];
+  projects: ProjectShortType[];
   cta: CtaType[];
 }
 
 interface ProjectsPageType extends PageType {
   title: string;
   lead: string;
-  customerStories: CustomerStoryEntryType[];
+  projects: ProjectShortType[];
   otherClientsTitle: string;
   clientLogos: ImageType[];
+}
+
+interface ProjectDetailsPageType extends PageType {
+  title: string;
 }
 
 interface PageType {

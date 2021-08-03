@@ -1,7 +1,6 @@
-import CustomerStoryLinks from '@components/Content/CustomerStoryLinks';
+import ProjectLinks from '@components/Content/ProjectLinks';
 import ContentRow from '@components/Layout/ContentRow';
 import DatoCMSImage from '@components/Media/DatoCMSImage';
-import NextImage from '@components/Media/NextImage';
 import Lead from '@components/Text/Lead';
 import SubTitle from '@components/Text/SubTitle';
 import Title from '@components/Text/Title';
@@ -24,7 +23,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
         </div>
       </ContentRow>
 
-      <CustomerStoryLinks stories={page.customerStories} />
+      <ProjectLinks projects={page.projects} />
 
       <ContentRow>
         <div className="max-w-4xl mb-8 md:mb-16">
