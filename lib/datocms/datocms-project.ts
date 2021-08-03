@@ -41,6 +41,32 @@ export const getProjectPageAndSite = async (
             }
           }
         }
+        
+        heroImage {
+          responsiveImage {
+            ...responsiveImageFragment
+          }
+        }
+        
+        content {
+          ... on SubtitleRecord {
+            subtitle
+            id
+          }
+          ... on TextRecord {
+            id
+            text
+          }
+          ... on TextAndImageBlockRecord {
+            id
+            title
+            description
+            imageAlignment
+            projectLink {
+              slug
+            }
+          }
+        }
                 
         seoMetaTags: _seoMetaTags {
           ...tagFragment
