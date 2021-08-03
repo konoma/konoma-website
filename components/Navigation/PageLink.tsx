@@ -14,7 +14,7 @@ const PageLink: React.FC<PageLinkProps> = (props) => {
 
   return (
     <div>
-      <Link href={href}>
+      <Link href={href} passHref>
         <a className={`text-${color} font-medium text-xl`}>
           <span className="flex items-center">
             <span>{label}</span>

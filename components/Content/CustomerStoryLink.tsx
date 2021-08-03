@@ -1,4 +1,4 @@
-import NextImage from '@components/Media/NextImage';
+import DatoCMSImage from '@components/Media/DatoCMSImage';
 import PageLink from '@components/Navigation/PageLink';
 import React from 'react';
 import { CustomerStoryEntryType } from '../../@types';
@@ -28,9 +28,8 @@ const CustomerStoryLink: React.FunctionComponent<CustomerStoryLinkProps> = (prop
         <PageLink href={story.customerStory.slug} label={story.ctaLabel} />
       </div>
 
-      {/* Max: 600x448  */}
-      <div className="w-75 lg:w-150 h-56 md:h-112 relative flex-none">
-        <NextImage image={story.teaserImage.responsiveImage} />
+      <div className="w-75 lg:w-150 h-56 md:h-112 flex-none">
+        <DatoCMSImage image={story.teaserImage} />
       </div>
     </div>
   );
