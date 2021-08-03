@@ -89,6 +89,28 @@ export const FRAGMENT_CTA = `
   }
 `;
 
+export const fetchAPINoParams = async <T>(query: string): Promise<T> => {
+  const authorization = 'Bearer ' + process.env.DATO_CMS_API_TOKEN;
+
+  const res = await fetch(API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: authorization,
+    },
+    body: JSON.stringify({
+      query,
+    }),
+  });
+
+  const json = await res.json();
+  if (json.errors) {
+    console.error(json.errors);
+    throw new Error('Failed to fetch API');
+  }
+  return json.data;
+};
+
 export const fetchAPI = async <T>(query: string, variables: any, preview: boolean): Promise<T> => {
   const authorization = 'Bearer ' + process.env.DATO_CMS_API_TOKEN;
 

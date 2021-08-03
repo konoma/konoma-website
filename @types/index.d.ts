@@ -1,3 +1,4 @@
+import { ParsedUrlQuery } from 'querystring';
 import { ResponsiveImageType } from 'react-datocms/dist/types/Image';
 import { SeoMetaTagType } from 'react-datocms/dist/types/Seo';
 import { PassionIconCodeEnum } from './enum';
@@ -7,6 +8,14 @@ declare module '*.jpg';
 declare module '*.jpeg';
 declare module '*.svg';
 declare module '*.gif';
+
+interface AllProjectSlugsType {
+  allProjects: SlugRouteType[];
+}
+
+interface SlugRouteType extends ParsedUrlQuery {
+  slug: string;
+}
 
 interface LocaleAndValueType {
   locale: string;
@@ -40,6 +49,10 @@ interface CustomerShortType {
   name: string;
 }
 
+interface CustomerDetailsType extends CustomerShortType {
+  logo: ImageType;
+}
+
 interface ProjectShortType {
   slug: string;
   title: string;
@@ -47,6 +60,11 @@ interface ProjectShortType {
   customer: CustomerShortType;
   referenceLabel: string;
   referenceImage: ImageType;
+}
+
+interface ProjectDetailsType extends ProjectShortType {
+  customer: CustomerDetailsType;
+  heroImage: ImageType;
 }
 
 interface HomePageType extends PageType {
@@ -68,9 +86,7 @@ interface ProjectsPageType extends PageType {
   clientLogos: ImageType[];
 }
 
-interface ProjectDetailsPageType extends PageType {
-  title: string;
-}
+interface ProjectDetailsPageType extends ProjectDetailsType {}
 
 interface PageType {
   seoMetaTags: SeoMetaTagType[];

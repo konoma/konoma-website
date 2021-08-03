@@ -16,7 +16,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = (props) => {
     .map<React.ReactNode>((pagePerLocale) => {
       const isActiveLocale = pagePerLocale.locale === router.locale;
       return (
-        <Link href={pagePerLocale.value}>
+        <Link key={pagePerLocale.value} href={pagePerLocale.value} passHref>
           <a
             className={`
                     px-0.5

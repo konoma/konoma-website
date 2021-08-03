@@ -10,14 +10,14 @@ interface PageContent {
   activeLocale: string;
 }
 
-const Index = ({ pageAndSite, activeLocale }: PageContent) => {
+const Home = ({ pageAndSite, activeLocale }: PageContent) => {
   return (
     <BasePage pageAndSite={pageAndSite}>
       <HomePage page={pageAndSite.page} />
     </BasePage>
   );
 };
-export default Index;
+export default Home;
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const activeLocale = GetLocale(context.locale);

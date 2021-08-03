@@ -1,5 +1,6 @@
 import {
   fetchAPI,
+  fetchAPINoParams,
   FRAGMENT_COMPANY_INFORMATION,
   FRAGMENT_CTA,
   FRAGMENT_FOOTER_INFORMATION,
@@ -7,13 +8,39 @@ import {
   FRAGMENT_SLUG_LOCALES,
   FRAGMENT_TAG,
 } from '@lib/datocms/datocms-common';
-import { DatoCMSResponseType, HomePageType, ProjectsPageType } from '../../@types';
+import { AllProjectSlugsType, DatoCMSResponseType, HomePageType, ProjectDetailsType, ProjectsPageType, SlugRouteType } from '../../@types';
 
-export const getProjectDetailsPageAndSite = async (locale: string, preview: boolean): Promise<DatoCMSResponseType<ProjectsPageType>> => {
+export const getAllProjectSlugs = async (locale: string): Promise<AllProjectSlugsType> => {
   const query = `
-    query ProjectsPageAndSite($locale: SiteLocale) {
-      page: projectsPage(locale: $locale) {
+    query AllProjectSlugs($locale: SiteLocale) {
+      allProjects(locale: $locale) {
+        slug
+      }
+    }
+  `;
+
+  return fetchAPINoParams<AllProjectSlugsType>(query);
+};
+
+export const getProjectPageAndSite = async (
+  slug: string,
+  locale: string,
+  preview: boolean,
+): Promise<DatoCMSResponseType<ProjectDetailsType>> => {
+  const query = `
+    query ProjectsPageAndSite($slug: String, $locale: SiteLocale) {
+      page: project(filter: {slug: {eq: $slug}}, locale: $locale) {
         title
+        question
+        
+        customer {
+          name
+          logo {
+            responsiveImage {
+              ...responsiveImageFragment
+            }
+          }
+        }
                 
         seoMetaTags: _seoMetaTags {
           ...tagFragment
@@ -45,10 +72,11 @@ export const getProjectDetailsPageAndSite = async (locale: string, preview: bool
     ${FRAGMENT_TAG}
   `;
 
-  return fetchAPI<DatoCMSResponseType<ProjectsPageType>>(
+  return fetchAPI<DatoCMSResponseType<ProjectDetailsType>>(
     query,
     {
       locale: locale,
+      slug: slug,
     },
     preview,
   );

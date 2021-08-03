@@ -1,4 +1,6 @@
 import { DEFAULT_LOCALE } from '@lib/defaults';
+import { ParsedUrlQuery } from 'querystring';
+import { SlugRouteType } from '../@types';
 
 export const GetLocale = (localeFromContext?: string): string => {
   if (localeFromContext === undefined || localeFromContext === null) {
@@ -13,5 +15,13 @@ export const GetPreview = (previewFromContext?: boolean): boolean => {
     return false;
   } else {
     return previewFromContext;
+  }
+};
+
+export const GetSlug = (paramsFromContext?: SlugRouteType): string | null => {
+  if (paramsFromContext === undefined || paramsFromContext === null) {
+    return null;
+  } else {
+    return paramsFromContext.slug;
   }
 };

@@ -8,7 +8,11 @@ interface ProjectsPageProps {
 const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
   const { page } = props;
 
-  return <div className="border-b border-indigo-300"></div>;
+  return (
+    <div className="border-b border-indigo-300">
+      <h1>{page.title}</h1>
+    </div>
+  );
 };
 
 export default ProjectsPage;
