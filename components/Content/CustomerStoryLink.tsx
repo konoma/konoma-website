@@ -18,7 +18,7 @@ const CustomerStoryLink: React.FunctionComponent<CustomerStoryLinkProps> = (prop
 
   return (
     <div
-      className={`flex flex-col-reverse gap-8 lg:gap-36 lg:items-center mt-20 mb-20 ${
+      className={`flex flex-col-reverse gap-8 xl:gap-36 lg:items-center mt-20 mb-20 ${
         imageAlignment === AlignmentEnum.LEFT ? 'lg:flex-row-reverse' : 'lg:flex-row'
       }`}
     >

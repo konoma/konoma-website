@@ -10,8 +10,6 @@ interface NextImageProps extends BaseComponentProps {
 const NextImage: React.FunctionComponent<NextImageProps> = (props) => {
   const { image } = props;
 
-  console.log(JSON.stringify(image));
-
   if (image.src === undefined || image.width === undefined || image.height === undefined) {
     return <></>;
   }

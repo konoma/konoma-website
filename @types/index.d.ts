@@ -61,7 +61,7 @@ interface ProjectsPageType extends PageType {
   lead: string;
   customerStories: CustomerStoryEntryType[];
   otherClientsTitle: string;
-  clientLogos: ResponsiveImageType[];
+  clientLogos: ImageType[];
 }
 
 interface PageType {

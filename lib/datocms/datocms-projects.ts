@@ -20,7 +20,7 @@ export const getProjectsPageAndSite = async (locale: string, preview: boolean): 
           id
           ctaLabel
           teaserImage {
-            responsiveImage(imgixParams: { w: 1200 }) {
+            responsiveImage {
               ...responsiveImageFragment
             }
           }
@@ -35,7 +35,7 @@ export const getProjectsPageAndSite = async (locale: string, preview: boolean): 
         otherClientsTitle
         
         clientLogos {
-          responsiveImage(imgixParams: { w: 200 }) {
+          responsiveImage {
             ...responsiveImageFragment
           }
         }
