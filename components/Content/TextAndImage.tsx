@@ -1,5 +1,6 @@
 import DatoCMSImage from '@components/Media/DatoCMSImage';
 import PageLink from '@components/Navigation/PageLink';
+import Text from '@components/Text/Text';
 import React from 'react';
 import { ImageType, ProjectLinkType } from '../../@types';
 import { AlignmentEnum } from '../../@types/enum';
@@ -24,12 +25,12 @@ const TextAndImage: React.FunctionComponent<TextAndImageProps> = (props) => {
       <div>
         {title !== null && <h3 className="text-indigo-700 font-serif text-2xl mb-10">{title}</h3>}
 
-        <p className="mb-10 text-xl">{description}</p>
+        <Text>{description}</Text>
 
         {projectLink !== null && <PageLink href={projectLink.slug} label={projectLink.referenceLabel} />}
       </div>
 
-      <div className="w-75 lg:w-150 h-56 md:h-112 flex-none">
+      <div className="max-w-xl flex-none">
         <DatoCMSImage image={image} />
       </div>
     </div>

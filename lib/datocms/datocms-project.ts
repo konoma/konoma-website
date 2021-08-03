@@ -62,14 +62,17 @@ export const getProjectPageAndSite = async (
         
         content {
           ... on SubtitleRecord {
+            _modelApiKey
             subtitle
             id
           }
           ... on TextRecord {
+            _modelApiKey
             id
             text
           }
           ... on TextAndImageBlockRecord {
+            _modelApiKey
             id
             title
             description
